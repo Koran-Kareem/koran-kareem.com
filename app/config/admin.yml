@@ -1,0 +1,54 @@
+#Sonata Block
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+
+        sonata.block.service.text:
+        sonata.block.service.action:
+        sonata.block.service.rss:
+
+#Sonata Admin
+sonata_admin:
+    title: Admin
+    title_logo: /bundles/core/images/logo_admin.png
+    templates:
+        # default global templates
+        layout:  ::Admin/standard_layout.html.twig
+        ajax:    SonataAdminBundle::ajax_layout.html.twig
+
+        # default actions templates, should extend a global templates
+        list:    SonataAdminBundle:CRUD:list.html.twig
+        show:    SonataAdminBundle:CRUD:show.html.twig
+        edit:    SonataAdminBundle:CRUD:edit.html.twig
+    security:
+        handler: sonata.admin.security.handler.role
+    dashboard:
+        blocks:
+            # display a dashboard block
+            - { position: left, type: sonata.admin.block.admin_list }
+        groups:
+            QuranGroup:
+                label: Quran
+                items:
+                    - sonata.admin.quran_reciter
+                    - sonata.admin.site_adhkar
+                    - sonata.admin.site_tilawat
+                    - sonata.admin.hadith_category
+                    - sonata.admin.hadith
+                    - sonata.admin.text_hadith_category
+                    - sonata.admin.text_hadith
+                    - sonata.admin.quran_chapter
+
+            Users:
+                label: Manage Users
+                items:
+                    - sonata.admin.site_users
+
+            Contact:
+                label: Contact
+                items:
+                    - sonata.admin.site_page
+                    - sonata.admin.site_contact
+                    - sonata.admin.country

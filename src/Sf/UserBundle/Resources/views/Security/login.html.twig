@@ -1,0 +1,48 @@
+{% extends "UserBundle::layout.html.twig" %}
+
+{% block meta %}
+    {{ generate_meta("Login") | raw }}
+{% endblock %}
+
+{% block userbundle_title %}
+    <h2>{{ 'global.login' | trans }}<span class="h-line">&nbsp;</span></h2>
+{% endblock %}
+
+{% block fos_user_content %}
+    <form action="{{ path("fos_user_security_check") }}" method="post">
+        <ul class="ulstyle05">
+            <li>
+                <label for="username">{{ 'security.login.username'|trans({}, 'FOSUserBundle') }}</label>
+                <input class="c-field" type="text" id="username" name="_username" value="{{ last_username }}"
+                       required="required"/>
+            </li>
+            <li>
+                <label for="password">{{ 'security.login.password'|trans({}, 'FOSUserBundle') }}</label>
+                <input class="c-field" type="password" id="password" name="_password" required="required"/>
+            </li>
+            <li>
+                <label for="remember_me">{{ 'security.login.remember_me'|trans({}, 'FOSUserBundle') }}</label>
+                <input type="checkbox" id="remember_me" name="_remember_me" value="on"/>
+            </li>
+            <li>&nbsp;</li>
+            <li>
+                <input type="submit" id="_submit" name="_submit"
+                       value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}" class="readmorebtn sumitbtn"/>
+            </li>
+            <li>
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
+            </li>
+        </ul>
+        <div>
+            <ul class="star-list">
+                <li>
+                    <a href="{{ path('fos_user_registration_register') }}">{{ 'login.not_register_yet' | trans }}</a>
+                </li>
+                <li>
+                    <a href="{{ path('fos_user_resetting_request') }}">{{ 'login.forget_password' | trans }}</a>
+                </li>
+            </ul>
+
+        </div>
+    </form>
+{% endblock fos_user_content %}

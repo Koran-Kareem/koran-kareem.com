@@ -1,0 +1,37 @@
+{% extends 'CoreBundle::layout.html.twig' %}
+{% block  body %}
+    {{ parent() }}
+
+    <section class="festivalswrapper nop">
+        <section class="subscribewrapper">
+            <section class="mainwrapper">
+                <section class="grid-holder">
+                    <section class="grid">
+                        <h2>
+                            <img src="{{ asset('bundles/core/images/islam-icon.png') }}" alt=""
+                                 class="home-random-label" width="59" height="63"/>
+                            {{ 'global.random' | trans }}
+                            <span class="h-line">&nbsp;</span>
+                        </h2>
+                        {{ generate_home_player(reciter_dir,adhkar_dir,tilawa_dir,hadith_dir) | raw }}
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <section class="festivalswrapper bodywrapper">
+        <section class="mainwrapper">
+            {{ render(controller("QuranBundle:Reciter:recitersListBlock")) }}
+        </section>
+
+        <section class="mainwrapper">
+            {{ render(controller("QuranBundle:Adhkar:adhkarBlock")) }}
+        </section>
+
+        <section class="mainwrapper">
+            {{ render(controller("QuranBundle:Tilawa:tilawaBlock")) }}
+        </section>
+    </section>
+
+{% endblock %}

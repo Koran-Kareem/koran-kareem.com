@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <!-- created by Symfony2 Command line :) , Sadok Ferjani-->
+
+    {# Reciters #}
+    <url>
+        <loc>{{ site_url ~ path('reciters_list') | url_decode() }}</loc>
+        <changefreq>yearly</changefreq>
+    </url>
+    {% for reciter in reciters %}
+        <url>
+            <loc>{{ site_url ~ path('reciter_page',{'slug': reciter.slug, 'name' : reciter.arabicName | trim | replace({" " : "-"})  }) | url_decode() }}</loc>
+            <changefreq>yearly</changefreq>
+        </url>
+        <url>
+            <loc>{{ site_url ~ path('reciter_list_chapter',{'slug': reciter.slug, 'name' : reciter.arabicName | trim | replace({" " : "-"})  }) | url_decode() }}</loc>
+            <changefreq>yearly</changefreq>
+        </url>
+        {% for chapter in chapters %}
+        <url>
+            <loc>{{ site_url ~ path('reciter_play_chapter',{
+            'slug' : reciter.slug,
+            'name' : reciter.arabicName| trim | replace({" " : "-"}),
+            'chapter' : chapter.name | trim | replace({" " : "-"}),
+            'ordering': chapter.ordering
+            }) | url_decode() }}
+            </loc>
+            <changefreq>yearly</changefreq>
+        </url>
+        {% endfor %}
+    {% endfor %}
+
+    {# Adhkar #}
+    <url>
+        <loc>{{ site_url ~ path('adhkar_list') | url_decode() }}</loc>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>{{ site_url ~ path('adhkar_listen_all') | url_decode() }}</loc>
+        <changefreq>yearly</changefreq>
+    </url>
+    {% for adhkar in adhkars %}
+    <url>
+        <loc>{{ site_url ~ path('adhkar_play',{
+        'name' : adhkar.name | trim | replace({" " : "-"}) ~ "-" ~ adhkar.reciter | trim | replace({" " : "-"}),
+        'id':adhkar.id
+        }) | url_decode() }}</loc>
+        <changefreq>yearly</changefreq>
+    </url>
+    {% endfor %}
+
+    {# Tilawat #}
+    <url>
+        <loc>{{ site_url ~ path('tilawat_list') | url_decode() }}</loc>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>{{ site_url ~ path('tilawa_listen_all') | url_decode() }}</loc>
+        <changefreq>yearly</changefreq>
+    </url>
+    {% for tilawa in tilawat %}
+        <url>
+            <loc>{{ site_url ~ path('tilawa_play',{
+            'name' : tilawa.name | trim | replace({" " : "-"}),
+            'id':tilawa.id
+            }) | url_decode() }}</loc>
+            <changefreq>yearly</changefreq>
+        </url>
+    {% endfor %}
+
+    {# Hadith #}
+    <url>
+        <loc>{{ site_url ~ path('hadith_categories') | url_decode() }}</loc>
+        <changefreq>yearly</changefreq>
+    </url>
+    {% for category in hadithsCategory %}
+        <url>
+            <loc>{{ site_url ~ path('hadith_category',{
+                        'id': category.id,
+                        'category_name' : category.name | trim | replace({" " : "-"})  })
+                        | url_decode() }}</loc>
+            <changefreq>yearly</changefreq>
+        </url>
+        <url>
+            <loc>{{ site_url ~ path('adhkar_play_all',
+                        {'category_name':category.name | trim | replace({" " : "-"}),'id': category.id })
+                        | url_decode() }}</loc>
+            <changefreq>yearly</changefreq>
+        </url>
+    {% endfor %}
+    {% for hadith in hadiths %}
+        <url>
+            <loc>{{ site_url ~ path('hadith_play',{
+                    'category_name':hadith.category.name | trim | replace({" " : "-"}),
+                    'name' : hadith.name | trim | replace({" " : "-"}) ,'id': hadith.id ,
+                    'category_id' : hadith.category.id }) | url_decode() }}</loc>
+            <changefreq>yearly</changefreq>
+        </url>
+    {% endfor %}
+
+    {# Text Adhkar Category #}
+    <url>
+        <loc>{{ site_url ~ path('text_adhkar_categories') | url_decode() }}</loc>
+        <changefreq>yearly</changefreq>
+    </url>
+    {% for category in textAdhkarCategory %}
+        <url>
+            <loc>{{ site_url ~ path('text_hadith',{'id': category.id, 'category_name' : category.name | trim | replace({" " : "-"})  }) | url_decode() }}</loc>
+            <changefreq>yearly</changefreq>
+        </url>
+    {% endfor %}
+
+</urlset>

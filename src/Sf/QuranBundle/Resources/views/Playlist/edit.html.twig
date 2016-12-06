@@ -1,0 +1,65 @@
+{% extends 'CoreBundle::layout.html.twig' %}
+
+{% block body %}
+    {% set cp=0 %}
+    <section class="bodywrapper inner">
+        <section class="mainwrapper">
+            <h2>{{ 'playlist.edit_your_playlist' | trans }}
+                <a href="{{ path('playlist_list') }}"
+                   class="back-to-playlist animated-hover">{{ 'playlist.back_to_playlist' | trans }}</a>
+                <span class="h-line"></span>
+            </h2>
+
+            <div id="playlist-target">
+                <ul id="playlist-ul">
+                    {% for item in playlist.items %}
+                        <li>
+                            <img class="playlist-delete-item" src="{{ asset('bundles/core/images/delete.png') }}" width="12" height="12">
+                        {% if item.type == "chapter" %}
+                            <span class="chapter"
+                                  chapter-id="{{ item.chapter.id }}"
+                                  reciter-id="{{ item.reciter.id }}"
+                                  data-type="chapter"
+                                  id="chapterId_playlist_1">
+                                {{ item.chapter.name }} ({{ item.reciter.arabicName }})
+                            </span>
+                        {% elseif item.type == "adhkar" %}
+                            <span class="chapter"
+                                  adhkar-id="{{ item.adhkar.id }}"
+                                  data-type="adhkar"
+                                  id="adhkarId_playlist_1">
+                                {{ item.adhkar.name }} ({{ item.adhkar.reciter }})
+                            </span>
+                        {% elseif item.type == "tilawa" %}
+                            <span class="chapter"
+                                  tilawa-id="{{ item.tilawa.id }}"
+                                  data-type="tilawa"
+                                  id="adhkarId_playlist_1">
+                                {{ item.tilawa.name }}
+                            </span>
+                        {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+                <input
+                        title-trans="{{ 'playlist.enter_playlist_name' | trans }}"
+                        ok-trans="{{ 'playlist.ok' | trans }}"
+                        cancel-trans="{{ 'playlist.cancel' | trans }}"
+                        save-url="{{ path('playlist_edit_save',{'id' : playlist.id}) }}" name="edit_playlist"
+                        type="button"
+                        class="readmorebtn submit edit-playlist-btn" value="{{ 'playlist.edit' | trans }}">
+                <input name="cancel_playlist" type="button" class="readmorebtn submit gray cancel-playlist-btn"
+                       value="{{ 'playlist.cancel_playlist' | trans }}">
+                <input name="playlist-name" id="playlist-name" type="hidden" value="{{ playlist.name }}" />
+            </div>
+
+            {% include 'QuranBundle:Playlist:Commun/items_block.html.twig' with {
+                                                                                    'recitersList' : recitersList,
+                                                                                    'chapterList' : chapterList,
+                                                                                    'adhkarList' : adhkarList,
+                                                                                }
+            %}
+        </section>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'CoreBundle::layout.html.twig' %}
+
+{% block meta %}
+    {{ generate_meta("Contact") | raw }}
+{% endblock %}
+
+{% block  body %}
+    {{ parent() }}
+    <section class="bodywrapper inner">
+        <section class="mainwrapper">
+            <section class="grid-holder">
+                <h2>{{ 'global.contact_us' | trans }}<span class="h-line">&nbsp;</span></h2>
+                <section class="grid">
+                    <!-- #2 column -->
+                    <aside class="column c-one-third">
+                        <figure class="leftnav">
+                            <form action="{{ path('core_contact_us') }}" method="post" {{ form_enctype(form) }}
+                                  class="blogger">
+                                {{ form_errors(form) }}
+                                <ul class="ulstyle05">
+
+                                    {{ form_row(form.name) }}
+                                    {{ form_row(form.email) }}
+                                    {{ form_row(form.subject) }}
+                                    {{ form_row(form.body) }}
+
+                                    <li>{{ form_rest(form) }}</li>
+                                    <li>
+                                        <input type="submit" value="{{ 'contact.label.submit' | trans }}"
+                                               class="readmorebtn sumitbtn"/>
+                                    </li>
+                                </ul>
+                            </form>
+                        </figure>
+                    </aside>
+                </section>
+            </section>
+        </section>
+    </section>
+{% endblock %}

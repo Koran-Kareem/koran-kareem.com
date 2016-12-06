@@ -1,0 +1,85 @@
+{% spaceless %}
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html class="ie ie6" lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en" dir="ltr"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en" dir="ltr">
+<!--<![endif]-->
+<head>
+    {% block meta_head %}{% endblock %}
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- CSS Style -->
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{{ google_analytics_id }}']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body id="def" class="homeblue">
+<div class="wrapper">
+    {% block header %}{% endblock %}
+    <span class="mainbodywraptop"></span>
+    <section class="bodywrapper inner">
+        <section class="mainwrapper">
+            <section class="grid-holder">
+                {% for flashMessage in app.session.flashbag.get('success') %}
+                    <div class="alert success hideit">
+                        <p> {{ flashMessage | trans }}</p>
+                        <span class="close"></span>
+                    </div>
+                {% endfor %}
+                {% if invalid_username is defined %}
+                    <div class="alert error hideit">
+                        <p>{{ 'resetting.request.invalid_username'|trans({'%username%': invalid_username}, 'FOSUserBundle') }}</p>
+                        <span class="close"></span>
+                    </div>
+                {% endif %}
+                {% for flashMessage in app.session.flashbag.get('error') %}
+                    <div class="alert error hideit">
+                        <p> {{ flashMessage | trans }}</p>
+                        <span class="close"></span>
+                    </div>
+                {% endfor %}
+                {% if error is defined and error %}
+                    <div class="alert error hideit">
+                        <p>
+                            {{ error|trans({}, 'FOSUserBundle') }}
+                        </p>
+                        <span class="close"></span>
+                    </div>
+                {% endif %}
+            </section>
+             <span id="loader-span">
+                <img src="{{ asset('bundles/core/images/loader.gif') }}" width="20" height="20"  id="loader-img"/>
+            </span>
+        </section>
+    </section>
+
+    {% block body %}{% endblock %}
+    <span class="mainbodywraptop"></span>
+
+    {% block footer %}{% endblock %}
+</div>
+{% block javascripts %}{% endblock %}
+</body>
+</html>
+{% endspaceless %}

@@ -1,0 +1,15 @@
+{% extends 'CoreBundle::layout.html.twig' %}
+
+{% block body %}
+    <section class="mainwrapper">
+        <h2 class="headingstyle01 headingstyle04">{{ 'global.error_occurred' | trans }}<span></span></h2>
+        <article class="test-holder searchcon">
+            <p>{{ 'global.error_on_page' | trans }}</p><br>
+            <blockquote>
+                "{{ status_code }}"<br>
+                {{ status_text }}"
+            </blockquote>
+            <a href="{{ path('core_homepage') }}" class="home-page-link">{{ 'global.back_to_home_page' | trans }}</a>
+        </article>
+    </section>
+{% endblock %}

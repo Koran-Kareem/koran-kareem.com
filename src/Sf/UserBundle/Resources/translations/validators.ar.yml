@@ -1,0 +1,25 @@
+fos_user:
+    username:
+        already_used: The username is already used
+        blank: Please enter a username
+        short: "[-Inf,Inf]The username is too short"
+        long: "[-Inf,Inf]The username is too long"
+    email:
+        already_used: البريد الالكتروني قيد الاستخدام
+        blank: من فضلك ادخل بريد الكتروني
+        short: "[-Inf,Inf]The email is too short"
+        long: "[-Inf,Inf]The email is too long"
+        invalid: البريد الإلكتروني غير صالح
+    password:
+        blank: الرجاء إدخال كلمة مرور
+        short: "[-Inf,Inf]The password is too short"
+        mismatch:  كلمات المرور لا تتطابق
+    new_password:
+        blank: الرجاء إدخال كلمة مرور جديدة
+        short: "[-Inf,Inf]The new password is too short"
+    current_password:
+        invalid: لقد ادخلت كلمة المرور غير صالحة
+    group:
+        blank: Please enter a name
+        short: "[-Inf,Inf]The name is too short"
+        long: "[-Inf,Inf]The name is too long"

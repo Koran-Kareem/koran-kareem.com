@@ -1,0 +1,7 @@
+parameters:
+#    quran.example.class: Sf\QuranBundle\Example
+
+services:
+#    quran.example:
+#        class: %quran.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

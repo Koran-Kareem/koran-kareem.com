@@ -1,0 +1,7 @@
+contact:
+  errors:
+    empty_name: الرجاء إدخال الإسم
+    empty_email: الرجاء إدخال البريد الإلكتروني
+    not_valid_email: الرجاء التأكد من صحة البريد الإلكتروني
+    empty_subject: الرجاء إدخال الموضوع
+    empty_body: الرجاء إدخال نص الرسالة

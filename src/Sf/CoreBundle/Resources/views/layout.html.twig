@@ -1,0 +1,73 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    {% stylesheets
+    'bundles/core/css/*'
+    'bundles/core/player/css/*'
+    filter='cssrewrite,?yui_css' %}
+    <link rel="stylesheet" href="{{ asset_url }}">
+    {% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts
+    'bundles/core/js/libs/jquery-1.7.2.js'
+    'bundles/core/js/libs/jquery-ui-1.8.23.js'
+    'bundles/core/js/libs/ddsmooth.js'
+    'bundles/core/js/libs/jquery.sharrre-1.3.4.js'
+    'bundles/core/js/libs/selectna.js'
+    'bundles/core/js/libs/jquery-prettyphoto.js'
+    'bundles/core/js/libs/jquery-uItotop.js'
+    'bundles/core/js/libs/jquery.flexslider.js'
+    'bundles/core/js/libs/jquery.isotope.min.js'
+    'bundles/core/js/libs/apprise-1.5.min.js'
+    'bundles/core/js/libs/tytabs00.js'
+    'bundles/core/js/libs/styleswi.js'
+    'bundles/core/js/libs/colortip.js'
+    'bundles/core/player/js/swfobject.js'
+    'bundles/core/player/js/jquery.ui.touch-punch.min.js'
+    'bundles/core/player/js/jquery.XDomainRequest.js'
+    'bundles/core/player/js/jquery.mousewheel.min.js'
+    'bundles/core/player/js/jquery.jscrollpane.min.js'
+    'bundles/core/player/js/id3-minimized.js'
+    'bundles/core/player/js/jquery.apPlaylistManager.min.js'
+    'bundles/core/player/js/jquery.apTextScroller.min.js'
+    'bundles/core/player/js/jquery.html5audio.min.js'
+    'bundles/core/player/js/jquery.html5audio.func.js'
+    'bundles/core/player/js/settings-player.js'
+    'bundles/core/js/fb-traffic-pop.js'
+    'bundles/core/js/translations/messages_ar.js'
+    'bundles/core/js/social-share-init.js'
+    'bundles/core/js/quran-main.js'
+    filter='?yui_js' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+{% endblock %}
+
+{% block meta_head %}
+    {% if app.request.attributes.get('_route') != "" %}
+        {% block meta %}
+            {{ generate_meta() | raw }}
+        {% endblock %}
+        <meta property='og:image' content='{{ site_url ~ asset('/bundles/core/images/koran-kareem-logo.jpg') }}'/>
+        <meta property='og:url'
+              content='{{ site_url ~ path(app.request.attributes.get('_route'),app.request.attributes.get('_route_params')) |url_decode() }}'/>
+        <meta property='og:type' content='website'/>
+        <meta property='og:site_name' content='{{ 'global.site_title' | trans }}'/>
+        <link rel="author" href="https://plus.google.com/u/0/108306748853715062812/about"/>
+        <link rel="alternate" href="http://www.koran-kareem.com" hreflang="ar"/>
+    {% endif %}
+{% endblock %}
+
+{% block header %}
+    {% include 'CoreBundle:Commun:header.html.twig' %}
+{% endblock %}
+
+{% block body %}{% endblock %}
+
+{% block footer %}
+    {% include 'CoreBundle:Commun:footer.html.twig' %}
+{% endblock %}
+
+

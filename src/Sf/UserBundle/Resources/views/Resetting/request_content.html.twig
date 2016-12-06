@@ -1,0 +1,13 @@
+<form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+    <ul class="ulstyle05">
+        <li>
+            <label for="username">{{ 'resetting.request.username'|trans({}, 'FOSUserBundle') }}</label>
+            <input class="c-field"  type="text" id="username" name="username" required="required"/>
+        </li>
+    </ul>
+    <br/>
+    <div>
+        <input type="submit" value="{{ 'resetting.request.submit'|trans({}, 'FOSUserBundle') }}"
+               class="readmorebtn sumitbtn"/>
+    </div>
+</form>

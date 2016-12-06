@@ -1,0 +1,45 @@
+{% set _data =  'global.I_m_listen_to_koran' | trans  %}
+{% if _type is defined and _object is defined%}
+    {% if _type == "reciter" %}
+        {% set _data = 'global.I_m_listen_to' | trans ({'%s': _object.arabicName }) %}
+    {% endif %}
+    {% if _type == "adhkar" %}
+        {% set _data = 'global.I_m_listen_to' | trans ({'%s': _object.name ~ " " ~ _object.reciter }) %}
+    {% endif %}
+    {% if _type == "tilawa" %}
+        {% set _data = 'global.I_m_listen_to' | trans ({'%s': _object.name }) %}
+    {% endif %}
+    {% if _type == "hadith" %}
+        {% set _data = 'global.I_m_listen_to' | trans ({'%s': _object.name }) %}
+    {% endif %}
+    {% if _type == "hadithCategory" %}
+        {% set _data = 'global.I_m_listen_to' | trans ({'%s': _object.name }) %}
+    {% endif %}
+    {% if _type == "textAdhkarCategory" %}
+        {% set _data = 'global.read_textadhkar' | trans ({'%s': _object.name }) %}
+    {% endif %}
+    {% if _type == "textAdhkar" %}
+        {% set _data = 'global.text_adhkar' | trans  %}
+    {% endif %}
+{% endif %}
+<div id="social-share">
+    <div id="twitter" data-url="{{ site_url ~ path(app.request.attributes.get('_route'),app.request.attributes.get('_route_params')) }}"
+         data-text="{{ _data }}" data-title="Tweet">
+        <div class="box"><a class="count" href="#">0</a><a class="share" href="#">Tweet</a></div>
+    </div>
+    <div id="facebook" data-url="{{ site_url ~ path(app.request.attributes.get('_route'),app.request.attributes.get('_route_params')) | url_decode() }}"
+         data-text="{{ _data }}" data-title="Share">
+        <div class="box"><a class="count" href="#">0</a><a class="share" href="#">Share</a></div>
+    </div>
+    <div id="googleplus" data-url="{{ site_url ~ path(app.request.attributes.get('_route'),app.request.attributes.get('_route_params')) |url_decode() }}"
+         data-text="{{ _data }}" data-title="+1">
+        <div class="box"><a class="count" href="#">0</a><a class="share" href="#">+1</a></div>
+    </div>
+</div>
+<div id="ads-div">
+   <script type="text/javascript"><!--
+hsoub_adspace = 1610786655002043;
+hsoub_adspace_size = '250x250';
+//--></script>
+<script src="http://ads2.hsoub.com/show_market.js" type="text/javascript"></script>
+</div>

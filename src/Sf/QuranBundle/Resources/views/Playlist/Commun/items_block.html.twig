@@ -1,0 +1,10 @@
+<div id="horizontal-tabs">
+    <ul class="tabs">
+        <li data-link="{{ path('play_list_ajax',{'type' : 'reciter'}) }}">{{ 'global.reciters' | trans }}</li>
+        <li data-link="{{ path('play_list_ajax',{'type' : 'adhkar'}) }}">{{ 'main_menu.adhkar_list' | trans }}</li>
+        <li data-link="{{ path('play_list_ajax',{'type' : 'tilawa'}) }}">{{ 'main_menu.tilawat' | trans }}</li>
+    </ul>
+    <div id="content-tab">
+        <div class="tabscontent"></div>
+    </div>
+</div>

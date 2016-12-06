@@ -1,0 +1,54 @@
+{% extends 'CoreBundle::layout.html.twig' %}
+
+{% block meta %}
+    {{ generate_meta("QuranReciter",reciter) | raw }}
+{% endblock %}
+
+{% block body %}
+    <section class="bodywrapper inner">
+        <section class="mainwrapper">
+            <h2>
+                <img src="{{ asset('bundles/core/images/quran-icon.png') }}" alt="{{ reciter.arabicName }}" class="home-icon-label"  width="63" height="63"/>
+                {{ reciter.arabicName }}
+                <a href="{{ path('reciter_page',{'slug':reciter.slug, 'name' : reciter.arabicName | trim | replace({" " : "-"})  }) | url_decode() }}"
+                   class="back-to-playlist animated-hover">{{ 'playlist.back_to_playlist' | trans }}</a>
+                <span class="h-line"></span>
+            </h2>
+            <section class="grid">
+                <article class="column c-three-fourth">
+                    <ul class="chapter-list">
+                        {% set kp=0 %}
+                        {% set chapter_count=1 %}
+                        {% for chapter in chapterList %}
+                        <li><span class="counter">{{ chapter_count }}</span>
+                            <a href="{{ path('reciter_play_chapter',{
+                                                    'slug' : reciter.slug,
+                                                    'name' : reciter.arabicName| trim | replace({" " : "-"}),
+                                                    'chapter' : chapter.name | trim | replace({" " : "-"}),
+                                                    'ordering': chapter.ordering
+                            }) | url_decode() }}"><span class="chapter"
+                                             chapter-id="{{ chapter.id }}">
+                                        {{ chapter.name }}
+                                    <a class="download-link" href="{{ path('reciter_download_chapter',{
+                                        'slug' : reciter.slug,
+                                        'ordering': chapter.ordering
+                                    }) | url_decode() }}">
+                                        {{ 'global.download' | trans }}</a>
+                                    </span>
+                            </a>
+                        </li>
+                        {% set kp=kp+1 %}
+                        {% set chapter_count=chapter_count+1 %}
+                        {% if kp is divisibleby(38) %}
+                    </ul>
+                    <ul class="chapter-list">
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </article>
+                {% include 'CoreBundle:Commun:share-btn.html.twig' with {'_type': 'reciter', '_object' : reciter} %}
+            </section>
+        </section>
+    </section>
+
+{% endblock %}

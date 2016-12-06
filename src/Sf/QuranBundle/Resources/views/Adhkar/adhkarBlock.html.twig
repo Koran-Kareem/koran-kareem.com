@@ -1,0 +1,20 @@
+    <section class="bodywrapper inner">
+        <h2>
+            <img src="{{ asset('bundles/core/images/adhkar-icon.png') }}" alt="" class="home-icon-label" width="63" height="63"/>
+            {{ 'global.choices_from'|trans ~ ' ' ~ 'global.adhkar_doaa' | trans }}
+            <span class="h-line">&nbsp;</span>
+        </h2>
+        <section class="grid">
+            {% for adhkar in adhkarList %}
+                <article class="column c-one-third">
+                    <h3>{{ adhkar.name }} {% if adhkar.reciter is not empty %} - {{ adhkar.reciter  }} {% endif %}<span class="h-line">&nbsp;</span></h3>
+                    <a href="{{ path('adhkar_play',{
+                                                    'name' : adhkar.name | trim | replace({" " : "-"}) ~ "-" ~ adhkar.reciter | trim | replace({" " : "-"}),
+                                                    'id':adhkar.id
+                                                    }) | url_decode() }}"
+                       class="readmorebtn">{{ 'global.listen' | trans }}</a>
+                </article>
+            {% endfor %}
+            <a href="{{ path('adhkar_list') }}" class="readmorebtn small gray more-btn">{{ 'global.more' | trans }}</a>
+        </section>
+    </section>

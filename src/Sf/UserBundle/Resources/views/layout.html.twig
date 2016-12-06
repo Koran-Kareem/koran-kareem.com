@@ -1,0 +1,21 @@
+{% extends 'CoreBundle::layout.html.twig' %}
+{% block body %}
+    <section class="bodywrapper inner">
+        <section class="mainwrapper">
+            <section class="grid-holder">
+                {% block userbundle_title %}<h2>{{ 'global.register' | trans }}<span class="h-line">&nbsp;</span>
+                    </h2>{% endblock %}
+                <section class="grid">
+                    <!-- #2 column -->
+                    <aside class="column c-one-third">
+                        <figure class="leftnav">
+                            {% block fos_user_content %}
+                            {% endblock fos_user_content %}
+                        </figure>
+                    </aside>
+                </section>
+            </section>
+        </section>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+#Symfony directories
+vendor/*
+*/logs/*
+*/cache/*
+web/bundles/*
+
+# Configuration files
+app/config/parameters.yml
+web/css/*
+web/js/*
+web/upload/*
+
+.idea/*
+.DS_Store
+

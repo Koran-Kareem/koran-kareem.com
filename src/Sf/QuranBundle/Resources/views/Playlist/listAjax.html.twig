@@ -1,0 +1,83 @@
+{% if type == 'reciter' %}
+    {% set cp=0 %}
+    <div id="chapter-hidden-list">{% include 'QuranBundle:Playlist:Commun/chapter_list.html.twig' %}</div>
+    <section class="grid">
+        <figure class="column c-two-half">
+            <div class="accordion reciter-accordion">
+                {% for reciter in objectList %}
+                <h3><a id="reciter_name_{{ reciter.id }}" href="#">{{ reciter.arabicName }}</a></h3>
+                <div class="accordion-contain verst-list" reciter-id="{{ reciter.id }}"></div>
+                {% set cp=cp+1 %}
+                {% if cp is divisibleby(5) %}
+            </div>
+        </figure>
+        <figure class="column c-two-half">
+            <div class="accordion reciter-accordion">
+                {% endif %}
+                {% endfor %}
+            </div>
+        </figure>
+    </section>
+{% elseif type == 'adhkar' %}
+    <section class="grid">
+        <figure class="column c-one-half">
+            <div class="accordion">
+                <h3><a id="adhkar_list" href="#">{{ 'global.adhkar' | trans }}</a></h3>
+
+                <div>
+                    <ul class="chapter-playlist">
+                        {% set kp=0 %}
+                        {% set adhkar_count=1 %}
+                        {% for adhkar in objectList %}
+                        <li><span class="counter">{{ adhkar_count }}</span>
+                                    <span class="chapter"
+                                          data-type="adhkar"
+                                          adhkar-id="{{ adhkar.id }}"
+                                          id="adhkar_{{ adhkar.id }}">
+                                    {{ adhkar.name }} - ({{ adhkar.reciter }})
+                                    </span>
+                        </li>
+                        {% set kp=kp+1 %}
+                        {% set adhkar_count=adhkar_count+1 %}
+                        {% if kp is divisibleby(30) %}
+                    </ul>
+                    <ul class="chapter-playlist">
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </figure>
+    </section>
+{% elseif type == 'tilawa' %}
+    <section class="grid">
+        <figure class="column c-three-fourth">
+            <div class="accordion">
+                <h3><a id="tilawat_list" href="#">{{ 'global.tilawat' | trans }}</a></h3>
+
+                <div>
+                    <ul class="chapter-playlist">
+                        {% set kp=0 %}
+                        {% set tilawa_count=1 %}
+                        {% for tilawa in objectList %}
+                        <li><span class="counter">{{ tilawa_count }}</span>
+                                <span class="chapter"
+                                      data-type="tilawa"
+                                      tilawa-id="{{ tilawa.id }}"
+                                      id="tilawa_{{ tilawa.id }}">
+                                {{ tilawa.name }}
+                                </span>
+                        </li>
+                        {% set kp=kp+1 %}
+                        {% set tilawa_count=tilawa_count+1 %}
+                        {% if kp is divisibleby(20) %}
+                    </ul>
+                    <ul class="chapter-playlist">
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </figure>
+    </section>
+{% endif %}

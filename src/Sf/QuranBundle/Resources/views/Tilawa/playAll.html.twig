@@ -1,0 +1,20 @@
+{% extends 'CoreBundle::layout.html.twig' %}
+
+{% block body %}
+    <section class="bodywrapper inner">
+        <section class="mainwrapper">
+            <h2>
+                <img src="{{ asset('bundles/core/images/tilawat-icon.png') }}" alt="{{ 'main_menu.tilawat' | trans }}}" class="home-icon-label" width="63" height="63" />
+                {{ 'main_menu.tilawat' | trans }}
+                <a href="{{ path('tilawat_list') | url_decode() }}" class="back-to-playlist animated-hover">{{ 'playlist.back_to_playlist' | trans }}</a>
+                <span class="h-line">&nbsp;</span>
+            </h2>
+            <section class="grid">
+                <article class="column c-three-fourth">
+                    {{ generate_player_tilawa(tilawaList,tilawa_dir) | raw }}
+                </article>
+                {% include 'CoreBundle:Commun:share-btn.html.twig' %}
+            </section>
+        </section>
+    </section>
+{% endblock %}

@@ -1,0 +1,102 @@
+global:
+  site_title: موقع القرآن الكريم Koran-Kareem
+  site_description:
+  site_logo_title: موقع القرآن الكريم
+  register: تسجيل في الموقع
+  random: مختارات
+  login: دخول
+  logout : خروج
+  myprofil: ملفي الشخصي %username%
+  contact_us: تواصل معنا
+  reciters: القرّاء
+  reciter: القرّاء
+  hadith_play: حديث
+  listen: إستمع
+  adhkar: أدعية مختارة
+  adhkar_doaa: الأدعية والأذكار
+  thanks_contact_us: شكراً للإتصال بنا
+  playlist: قوائم التشغيل
+  audiofile: ملف صوتي
+  tilawat: تلاوة
+  adhkars: أذكار
+  chapter: سورة
+  items: ملف
+  download: تحميل
+  sitemap: خريطة الموقع
+  choices_from: مختارات من
+  error_occurred: عفوا! حدث خطأ
+  error_404: عمّار 404 !
+  page_not_found: لم يتم العثور على هذه الصفحة
+  error_on_page: حدث خطأ في هذه الصفحة. الرجاء الاتصال بنا على البريد الإلكتروني : contact@koran-kareem.com
+  back_to_home_page: العودة إلى الصفحة الرئيسية
+  more: تصفّح المزيد
+  tilawa_listen_all: إستمع للجميع
+  I_m_listen_to: أستمع إلى %s
+  read_textadhkar: موقع القرآن الكريم : %s
+  I_m_listen_to_koran: أستمع إلى القرآن الكريم
+  list_chapter: تصفّح السّور
+  browse: تصفّح
+  hadith_list: أحاديث نبوية
+  text_adhkar: الأدعية والأذكار من القرآن والسنة
+  #Footer
+  copyright: جميع الحقوق محفوظة © 2013-%currentYear%
+  back_to_top: الرجوع إلى أعلى الصفحة
+  join_us_facebook: إنضم إلينا على Facebook
+  join_us_twitter: إنضم إلينا على Twitter
+  join_us_google: إنضم إلينا على Google+
+  footer_location: ساهم في نشر موقع القرآن الكريم
+  social_networks: الشبكات الاجتماعية
+  about_site: نبذة عن الموقع
+  short_description: موقعنا مختص في نشر القرآن الكريم، يقدم مجموعة من القرّاء والتلاوات الخاشعة، إضافةً الى مجموعة مختارة من الأذكار والأدعية والأحاديث الشريفة
+
+main_menu:
+  home_page:  الرّئيسيّة
+  reciters_list: تصفح القرّاء
+  download_quran : تحميل القرآن
+  choose_play_list: قوائم التشغيل Playlists
+  adhkar_list: الأذكار
+  text_adhkar_categories: الأذكار من القرآن
+  tilawat: تلاوات خاشعة
+  hadith: أحاديث
+  about_us: من نحن
+
+
+contact:
+  label:
+    name : الإسم
+    email : البريد الإلكتروني
+    subject: الموضوع
+    body: الرسالة
+    submit: إرسال
+
+login:
+  not_register_yet : لم تسجل حتى الآن؟ انقر هنا
+  forget_password: نسيت كلمة المرور؟
+  change_passowrd: تغيير كلمة المرور
+  resetting_success:  تم بنجاح تغيير كلمة المرور
+
+playlist:
+  not_authenticated: قوائم التشغيل تمكنك من حفظ تلاوات لقرائك المفضلين و الإستماع لهم في كل مرة تود ذلك. يجب عليك تسجيل الدخول للتمتع بهذه الخدمة.
+  created_successful: لقد تم حفظ القائمة بنجاح
+  save_playlist: حفظ
+  cancel_playlist: مسح القائمة
+  enter_playlist_name: من فضلك ادخل إسم القائمة
+  listen: استمع
+  listen_to:  استمع إلى قائمتك
+  edit: تعديل
+  edit_your_playlist: تعديل قائمتك
+  delete: حذف
+  create: إضافة قائمة جديدة
+  ok: موافق
+  cancel: إلغاء
+  back_to_playlist: رجوع
+  you_dont_have_permission: ليس لك الإذن لدخول هذه القائمة !
+  confirm_delete: هل أنت متأكد ؟
+  you_dont_have_playlist: ليس لديك أي قائمة حتى الآن
+  successful_deleted:  تم حذف القائمة بنجاح
+  edited_successful:  تم تحديث القائمة بنجاح
+
+registration:
+    flash:
+        user_created: تم إنشاء المستخدم بنجاح
+        already_used: البريد الالكتروني قيد الاستخدام

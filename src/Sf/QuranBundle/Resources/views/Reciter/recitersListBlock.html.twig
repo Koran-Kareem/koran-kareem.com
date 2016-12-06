@@ -1,0 +1,11 @@
+    <section class="bodywrapper inner">
+        <h2>
+            <img src="{{ asset('bundles/core/images/quran-icon.png') }}" alt="{{ 'global.choices_from'|trans ~ ' ' ~ 'global.reciters' | trans }}" class="home-icon-label" width="63" height="63" />
+            {{ 'global.choices_from'|trans ~ ' ' ~ 'global.reciters' | trans }}
+            <span class="h-line">&nbsp;</span>
+        </h2>
+        <section class="grid">
+            {% include 'QuranBundle:Reciter:Commun/reciters.html.twig' with {'recitersList' : recitersList} %}
+            <a href="{{ path('reciters_list') | url_decode() }}" class="readmorebtn small gray more-btn">{{ 'global.more' | trans }}</a>
+        </section>
+    </section>

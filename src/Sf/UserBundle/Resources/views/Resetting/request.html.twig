@@ -1,0 +1,9 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block userbundle_title %}
+    <h2>{{ 'login.forget_password' | trans }}<span class="h-line">&nbsp;</span></h2>
+{% endblock %}
+
+{% block fos_user_content %}
+{% include "FOSUserBundle:Resetting:request_content.html.twig" %}
+{% endblock fos_user_content %}

@@ -1,0 +1,28 @@
+{% extends 'CoreBundle::layout.html.twig' %}
+
+{% block meta %}
+    {{ generate_meta("textAdhkar") | raw }}
+{% endblock %}
+
+{% block body %}
+    {% set cp=0 %}
+    <section class="bodywrapper inner">
+        <section class="mainwrapper">
+            <section class="grid">
+                <h2>
+                    <img src="{{ asset('bundles/core/images/adhkar-icon.png') }}" alt="{{ 'global.adhkar' | trans }}{{ 'global.text_adhkar' | trans }}" class="home-icon-label" width="63" height="63" />
+                    {{ 'global.adhkar' | trans }}{{ 'global.text_adhkar' | trans }}
+                </h2>
+                {% include 'CoreBundle:Commun:share-btn.html.twig' with {'_type': 'textAdhkar','_object' : true} %}
+                {% for category in categoriesList %}
+                    <article class="column c-one-third">
+                        <h3>{{ category.name }} <span class="h-line">&nbsp;</span></h3>
+
+                        <a href="{{ path('text_hadith',{'id': category.id, 'category_name' : category.name | trim | replace({" " : "-"})  }) | url_decode() }}"
+                           class="readmorebtn">{{ 'global.browse' | trans }}</a>
+                    </article>
+                {% endfor %}
+            </section>
+        </section>
+    </section>
+{% endblock %}

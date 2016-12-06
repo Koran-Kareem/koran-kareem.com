@@ -1,0 +1,25 @@
+{% extends 'CoreBundle::layout.html.twig' %}
+
+{% block meta %}
+    {{ generate_meta("HadithCategory",category) | raw }}
+{% endblock %}
+
+{% block body %}
+    <section class="bodywrapper inner">
+        <section class="mainwrapper">
+            <h2>
+                <img src="{{ asset('bundles/core/images/tilawat-icon.png') }}" alt="{{ category.name }}" class="home-icon-label" width="63" height="63" />
+                {{ category.name }}
+                <a href="{{ path('hadith_category',{'id': category.id, 'category_name' : category.name | trim | replace({" " : "-"})  }) | url_decode() }}"
+                   class="back-to-playlist animated-hover">{{ 'playlist.back_to_playlist' | trans }}</a>
+                <span class="h-line">&nbsp;</span>
+            </h2>
+            <section class="grid">
+                <article class="column c-three-fourth">
+                    {{ generate_player_hadith(hadithList,hadith_dir) | raw }}
+                </article>
+                {% include 'CoreBundle:Commun:share-btn.html.twig' with {'_type': 'hadith', '_object' : category} %}
+            </section>
+        </section>
+    </section>
+{% endblock %}

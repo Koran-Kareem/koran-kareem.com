@@ -1,0 +1,8 @@
+parameters:
+#    user.example.class: Sf\UserBundle\Example
+
+#services:
+#    sf_user.register.handler:
+#        class: Sf\UserBundle\Form\Handler\RegistrationFormHandler
+#        scope: request
+#        arguments: [@fos_user.registration.form.factory, @request, @fos_user.user_manager,@fos_user.mailer,@fos_user.util.token_generator]

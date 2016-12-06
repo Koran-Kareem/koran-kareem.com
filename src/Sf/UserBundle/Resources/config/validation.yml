@@ -1,0 +1,5 @@
+Sf\UserBundle\Entity\User:
+  properties:
+       email:
+           - NotBlank: {message: fos_user.email.blank }
+           - Email:  { checkMX: true, message: fos_user.email.invalid }

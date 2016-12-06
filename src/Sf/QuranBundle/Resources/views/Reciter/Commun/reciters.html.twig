@@ -1,0 +1,10 @@
+{% for reciter in recitersList %}
+    <article class="column {% if collumn_style is defined %}{{ collumn_style }}{% else %}c-one-fourth{% endif %}">
+        <h3>{{ reciter.arabicName }}  <span class="country-class">({{ reciter.country }})</span> <span class="h-line">&nbsp;</span></h3>
+        {% if with_history is defined and reciter.history is not empty %}
+            <blockquote class="reciter-history">{{ reciter.history}}</blockquote>
+        {% endif %}
+        <a href="{{ path('reciter_page',{'slug':reciter.slug, 'name' : reciter.arabicName | trim | replace({" " : "-"})  }) | url_decode() }}"
+           class="readmorebtn">{{ 'global.listen' | trans }}</a>
+    </article>
+{% endfor %}

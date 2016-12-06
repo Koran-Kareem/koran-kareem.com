@@ -1,0 +1,14 @@
+parameters:
+    core.service.setlocal: Sf\CoreBundle\Service\SetLocal
+
+services:
+    kernel.listener.setlocal:
+        class: Sf\CoreBundle\Listener\SetLocalListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+
+    sf_core.twig:
+        class: Sf\CoreBundle\Twig\CoreExtension
+        arguments: [@translator,@doctrine.orm.entity_manager]
+        tags:
+            - {name: twig.extension}

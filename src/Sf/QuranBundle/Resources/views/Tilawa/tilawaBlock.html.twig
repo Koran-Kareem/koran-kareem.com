@@ -1,0 +1,18 @@
+    <section class="bodywrapper inner">
+        <h2>
+            <img src="{{ asset('bundles/core/images/tilawat-icon.png') }}" alt="{{ 'global.choices_from'|trans ~ ' ' ~ 'main_menu.tilawat' | trans }}" class="home-icon-label" width="63" height="63" />
+            {{ 'global.choices_from'|trans ~ ' ' ~ 'main_menu.tilawat' | trans }}
+            <span class="h-line">&nbsp;</span>
+        </h2>
+        <section class="grid">
+            {% for tilawa in tilawaList %}
+                <article class="column c-one-third">
+                    <h3>{{ tilawa.name }} <span class="h-line">&nbsp;</span></h3>
+                    <a href="{{ path('tilawa_play',{'id':tilawa.id, 'name' : tilawa.name | trim | replace({" " : "-"})  }) | url_decode() }}"
+                       class="readmorebtn">{{ 'global.listen' | trans }}</a>
+                </article>
+            {% endfor %}
+            <a href="{{ path('tilawat_list') | url_decode() }}" class="readmorebtn small gray more-btn">{{ 'global.more' | trans }}</a>
+        </section>
+        <div class="clear-both"></div>
+    </section>

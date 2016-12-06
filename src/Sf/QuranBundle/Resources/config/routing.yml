@@ -1,0 +1,106 @@
+#Quran Reciters
+reciters_list:
+    pattern:  /quran-reciters/تصفح-القرّاء
+    defaults: { _controller: QuranBundle:Reciter:recitersList }
+
+reciter_page:
+    pattern:  /quran-reciter/{slug}/{name}
+    defaults: { _controller: QuranBundle:Reciter:reciter }
+
+reciter_list_chapter:
+    pattern:  /chapter/{slug}/{name}/تصفّح-السور
+    defaults: { _controller: QuranBundle:Reciter:chapter }
+
+reciter_play_chapter:
+    pattern:  /chapter-play/{slug}/{name}/{chapter}/{ordering}
+    defaults: { _controller: QuranBundle:Reciter:play }
+
+reciter_download_chapter:
+    pattern:  /chapter-download/{slug}/{ordering}
+    defaults: { _controller: QuranBundle:Reciter:download }
+
+#Playlist
+playlist_create:
+    pattern:  /playlist-create
+    defaults: { _controller: QuranBundle:Playlist:create }
+
+playlist_save:
+    pattern:  /playlist-save
+    defaults: { _controller: QuranBundle:Playlist:save }
+
+playlist_list:
+    pattern:  /playlist-list/قوائم-التشغيل-المفضلة
+    defaults: { _controller: QuranBundle:Playlist:list }
+
+playlist_play:
+    pattern:  /playlist-play/قوائم-التشغيل-المفضلة/{id}
+    defaults: { _controller: QuranBundle:Playlist:play }
+
+playlist_edit:
+    pattern:  /playlist-edit/{id}
+    defaults: { _controller: QuranBundle:Playlist:edit }
+
+playlist_edit_save:
+    pattern:  /playlist-edit-save/{id}
+    defaults: { _controller: QuranBundle:Playlist:editSave }
+
+playlist_delete:
+    pattern:  /playlist-delete/{id}
+    defaults: { _controller: QuranBundle:Playlist:delete }
+
+play_list_ajax:
+    pattern:  /playlist-list-ajax/{type}
+    defaults: { _controller: QuranBundle:Playlist:listAjax }
+
+#Adhkar
+adhkar_list:
+    pattern:  /adhkar/أذكار
+    defaults: { _controller: QuranBundle:Adhkar:list }
+
+adhkar_play:
+    pattern:  /adhkar/أذكار/{name}/{id}
+    defaults: { _controller: QuranBundle:Adhkar:play }
+
+adhkar_listen_all:
+    pattern:  /adhkar-play/أذكار
+    defaults: { _controller: QuranBundle:Adhkar:playAll }
+
+#Tilawat
+tilawat_list:
+    pattern:  /tilawat/تلاوات-خاشعة
+    defaults: { _controller: QuranBundle:Tilawa:list }
+
+tilawa_play:
+    pattern:  /tilawa/تلاوة/{name}/{id}
+    defaults: { _controller: QuranBundle:Tilawa:play }
+
+tilawa_listen_all:
+    pattern:  /tilawat-play/تلاوات-خاشعة
+    defaults: { _controller: QuranBundle:Tilawa:playAll }
+
+#Hadith
+hadith_categories:
+    pattern:  /hadith/أحاديث
+    defaults: { _controller: QuranBundle:Hadith:categories}
+
+hadith_category:
+    pattern:  /hadith/أحاديث/{category_name}/{id}
+    defaults: { _controller: QuranBundle:Hadith:category}
+
+hadith_play:
+    pattern:  /hadith-play/{category_name}/{name}/{id}/{category_id}
+    defaults: { _controller: QuranBundle:Hadith:play}
+
+adhkar_play_all:
+    pattern:  /hadith-play-all/أحاديث/{category_name}/{id}
+    defaults: { _controller: QuranBundle:Hadith:playAll}
+
+#Text Adhkar
+text_adhkar_categories:
+    pattern:  /doaa-adhkar/الأدعية-والأذكار-من-القرآن-والسنة
+    defaults: { _controller: QuranBundle:TextAdhkar:categories}
+text_hadith:
+    pattern:  /doaa-adhkar-list/الأدعية-والأذكار-من-القرآن-والسنة/{id}/{category_name}
+    defaults: { _controller: QuranBundle:TextAdhkar:textAdhkar}
+
+

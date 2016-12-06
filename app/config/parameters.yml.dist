@@ -1,0 +1,26 @@
+parameters:
+    database_driver:   pdo_mysql
+    database_host:     localhost
+    database_port:     ~
+    database_name:     koran-kareem
+    database_user:     root
+    database_password: root
+
+    mailer_transport:  sendmail
+    mailer_host:       127.0.0.1
+    mailer_user:       ~
+    mailer_password:   ~
+
+    locale:            ar
+    default_local:     ar
+    secret:            changeThisSecret
+
+    site_url: http://www.koran-kareem.com
+    webmaster_email: contact@koran-kareem.com
+    webmaster_name: "ﻡﻮﻘﻋ ﺎﻠﻗﺭﺂﻧ ﺎﻠﻛﺮﻴﻣ"
+    google_analytics_id: ""
+
+    upload_dir_reciter:  upload/Quran_Reciter
+    upload_dir_adhkar:  upload/Adhkar
+    upload_dir_tilawa:  upload/Tilawat
+    upload_dir_hadith:  upload/Hadith

@@ -1,0 +1,72 @@
+services:
+   sonata.admin.quran_reciter:
+      class: Sf\AdminBundle\Controller\QuranReciterAdminController
+      tags:
+        - { name: sonata.admin, manager_type: orm, group: quran, label: Manage Reciter }
+      arguments: [null, Sf\QuranBundle\Entity\QuranReciter, SonataAdminBundle:CRUD]
+
+   sonata.admin.quran_chapter:
+         class: Sf\AdminBundle\Controller\ChapterAdminController
+         tags:
+           - { name: sonata.admin, manager_type: orm, group: quran, label: Manage Chapter }
+         arguments: [null, Sf\QuranBundle\Entity\Chapter, SonataAdminBundle:CRUD]
+
+   sonata.admin.site_contact:
+         class: Sf\AdminBundle\Controller\ContactAdminController
+         tags:
+           - { name: sonata.admin, manager_type: orm, group: quran, label: Contact List}
+         arguments: [null, Sf\CoreBundle\Entity\Contact, SonataAdminBundle:CRUD]
+
+   sonata.admin.site_page:
+         class: Sf\AdminBundle\Controller\PageAdminController
+         tags:
+           - { name: sonata.admin, manager_type: orm, group: quran, label: Manage Page}
+         arguments: [null, Sf\CoreBundle\Entity\Page, SonataAdminBundle:CRUD]
+
+   sonata.admin.site_users:
+         class: Sf\AdminBundle\Controller\UserAdminController
+         tags:
+           - { name: sonata.admin, manager_type: orm, group: quran, label: Manage Users}
+         arguments: [null, Sf\UserBundle\Entity\User, SonataAdminBundle:CRUD]
+
+   sonata.admin.site_adhkar:
+            class: Sf\AdminBundle\Controller\AdhkarAdminController
+            tags:
+              - { name: sonata.admin, manager_type: orm, group: quran, label: Manage Adhkar}
+            arguments: [null, Sf\QuranBundle\Entity\Adhkar, SonataAdminBundle:CRUD]
+
+   sonata.admin.site_tilawat:
+            class: Sf\AdminBundle\Controller\TilawaAdminController
+            tags:
+              - { name: sonata.admin, manager_type: orm, group: quran, label: Manage Tilawat}
+            arguments: [null, Sf\QuranBundle\Entity\Tilawa, SonataAdminBundle:CRUD]
+
+   sonata.admin.hadith_category:
+            class: Sf\AdminBundle\Controller\HadithCategoryAdminController
+            tags:
+              - { name: sonata.admin, manager_type: orm, group: quran, label: Manage Hadith Category}
+            arguments: [null, Sf\QuranBundle\Entity\HadithCategory, SonataAdminBundle:CRUD]
+
+   sonata.admin.hadith:
+            class: Sf\AdminBundle\Controller\HadithAdminController
+            tags:
+              - { name: sonata.admin, manager_type: orm, group: quran, label: Manage Hadith}
+            arguments: [null, Sf\QuranBundle\Entity\Hadith, SonataAdminBundle:CRUD]
+
+   sonata.admin.text_hadith:
+            class: Sf\AdminBundle\Controller\TextAdhkarAdminController
+            tags:
+              - { name: sonata.admin, manager_type: orm, group: quran, label: Manage Text Hadith}
+            arguments: [null, Sf\QuranBundle\Entity\TextAdhkar, SonataAdminBundle:CRUD]
+
+   sonata.admin.text_hadith_category:
+            class: Sf\AdminBundle\Controller\TextAdhkarCategoryAdminController
+            tags:
+              - { name: sonata.admin, manager_type: orm, group: quran, label: Manage Text Hadith Category}
+            arguments: [null, Sf\QuranBundle\Entity\TextAdhkarCategory, SonataAdminBundle:CRUD]
+
+   sonata.admin.country:
+            class: Sf\AdminBundle\Controller\CountryAdminController
+            tags:
+              - { name: sonata.admin, manager_type: orm, group: quran, label: Manage Country}
+            arguments: [null, Sf\QuranBundle\Entity\Country, SonataAdminBundle:CRUD]

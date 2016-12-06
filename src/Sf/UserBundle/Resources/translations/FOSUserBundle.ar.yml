@@ -1,0 +1,101 @@
+# Group
+group:
+    edit:
+        submit: Update group
+    show:
+        name: Group name
+    new:
+        submit: Create group
+    flash:
+        updated: The group has been updated
+        created: The group has been created
+        deleted: The group has been deleted
+
+# Security
+"Bad credentials": البريد الإلكتروني أو كلمة المرور غير صحيحة
+"User account is disabled.": تم تعطيل حساب المستخدم
+"User account is locked.": تم تعطيل حساب المستخدم
+"User account has expired.": انتهت صلاحية حساب المستخدم.
+
+security:
+    login:
+        username: "البريد الإلكتروني"
+        password: "كلمة السر:"
+        remember_me: تذكرني
+        submit: دخول
+
+# Profile
+profile:
+    show:
+        username: Username
+        email: Email
+    edit:
+        submit: Update
+    flash:
+        updated: The profile has been updated
+
+# Password change
+change_password:
+    submit: تغيير كلمة المرور
+    flash:
+        success: تم تغيير كلمة المرور
+
+# Registration
+registration:
+    check_email: لقد تم إرسال رسالة إلكترونية إلى %email% انها تحتوي على رابط تفعيل يجب النقر عليه لتفعيل حسابك
+    confirmed: تهاني %username%، لقد تم تنشيط حسابك.
+    back: عودة إلى الصفحة الأصلية
+    submit: تسجيل
+    flash:
+        user_created: تم إنشاء المستخدم بنجاح
+    email:
+        subject: موقع القرآن الكريم‎
+        message: |
+            السلام عليكم,
+
+            لإنهاء تفعيل حسابك - يرجى زيارة %confirmationUrl%
+
+            مع تحيات,
+            موقع القرآن الكريم.
+
+# Password resetting
+resetting:
+    password_already_requested: كلمة المرور لهذا المستخدم طلبت خلال ال 24 ساعة الماضية.
+    check_email: لقد تم إرسال رسالة إلكترونية إلى البريد الإلكتروني %email%.  انها تحتوي على رابط تفعيل يجب النقر عليه لتفعيل حسابك.
+    request:
+        invalid_username: عنوان البريد الإلكتروني %username% غير موجود.
+        username: "من فضلك ادخل بريدك الإلكتروني :"
+        submit: تغيير  كلمة المرور
+    reset:
+        submit:  تغيير كلمة المرور
+    flash:
+        success: تم بنجاح تغيير كلمة المرور
+    email:
+        subject: تغيير كلمة المرور
+        message: |
+                السلام عليكم,
+
+                لإعادة تعيين كلمة المرور الخاصة بك - يرجى زيارة %confirmationUrl%
+
+                مع تحيات,
+                موقع القرآن الكريم.
+
+# Global strings
+layout:
+    logout: Logout
+    login: Login
+    register: Register
+    logged_in_as: تسجيل الدخول باسم %username%
+
+# Form field labels
+form:
+    group_name: "Group name:"
+    username: "إسم المستخدم:"
+    email: "البريد الإلكتروني:"
+    current_password: "كلمة المرور الحالية:"
+    password: "كلمة المرور:"
+    password_confirmation: "تأكيد كلمة المرور:"
+    new_password: "كلمة مرور جديدة:"
+    new_password_confirmation: "تأكيد كلمة مرور جديدة:"
+
+

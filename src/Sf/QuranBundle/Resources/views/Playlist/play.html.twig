@@ -1,0 +1,16 @@
+{% extends 'CoreBundle::layout.html.twig' %}
+
+{% block body %}
+    <section class="bodywrapper inner">
+        <section class="mainwrapper">
+            <h2>{{ 'playlist.listen_to' | trans }}
+                <a href="{{ path('playlist_list') }}" class="back-to-playlist animated-hover">{{ 'playlist.back_to_playlist' | trans }}</a>
+                <span class="h-line"></span>
+            </h2>
+            <section class="grid">
+                {{ generate_playlist(items,reciter_dir,adhkar_dir,tilawa_dir) | raw }}
+            </section>
+        </section>
+    </section>
+
+{% endblock %}

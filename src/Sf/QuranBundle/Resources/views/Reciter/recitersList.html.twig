@@ -1,0 +1,22 @@
+{% extends 'CoreBundle::layout.html.twig' %}
+
+{% block meta %}
+    {{ generate_meta("Reciters") | raw }}
+{% endblock %}
+
+{% block body %}
+    <section class="bodywrapper inner">
+        <section class="mainwrapper">
+            <h2>
+                <img src="{{ asset('bundles/core/images/quran-icon.png') }}" alt="{{ 'global.reciters' | trans }}" class="home-icon-label"  width="63" height="63"/>
+                {{ 'global.reciters' | trans }}<span class="h-line">&nbsp;</span>
+            </h2>
+            <section class="grid">
+                {% include 'QuranBundle:Reciter:Commun/reciters.html.twig' with {
+                                            'recitersList' : recitersList,
+                                            'with_history' : true,
+                                            'collumn_style' : ''} %}
+            </section>
+        </section>
+    </section>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'CoreBundle::layout.html.twig' %}
+
+
+{% block meta %}
+    {{ generate_meta("HadithCategory",category) | raw }}
+{% endblock %}
+
+{% block body %}
+    {% set cp=0 %}
+    <section class="bodywrapper inner">
+        <section class="mainwrapper">
+            <h2>
+                <img src="{{ asset('bundles/core/images/tilawat-icon.png') }}" alt="{{ category.name }}" class="home-icon-label" width="63" height="63" />
+                {{ category.name }}
+                <a href="{{ path('adhkar_play_all',{'category_name':category.name | trim | replace({" " : "-"}),'id': category.id }) | url_decode() }}" class="listen-all listen-icon animated-hover">{{ 'global.tilawa_listen_all' | trans }}</a>
+                <span class="h-line"></span>
+            </h2>
+            <section class="grid">
+                {% include 'CoreBundle:Commun:share-btn.html.twig' with {'_type': 'hadithCategory', '_object' : category} %}
+
+                {% if category.description is not empty %}
+                    <blockquote class="item-description ">{{ category.description | nl2br }}</blockquote>
+
+                {% endif %}
+                {% for hadith in hadithList %}
+                    <article class="column {% if category.id == 2 %}c-one-half{% else %}c-one-third{% endif %}">
+                        <h3>{{ hadith.name }}<span class="h-line">&nbsp;</span></h3>
+                        <a href="{{ path('hadith_play',{'category_name':category.name | trim | replace({" " : "-"}), 'name' : hadith.name | trim | replace({" " : "-"}) ,'id': hadith.id , 'category_id' : category.id }) | url_decode() }}"
+                           class="readmorebtn">{{ 'global.listen' | trans }}</a>
+                    </article>
+                {% endfor %}
+            </section>
+        </section>
+    </section>
+{% endblock %}

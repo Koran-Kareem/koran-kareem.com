@@ -1,0 +1,97 @@
+<header class="mainheader">
+    <section class="topmenu">
+        <span class="patern bg-1"></span>
+        <strong class="bismiallah"></strong>
+        <span class="patern bg-2"></span>
+    </section>
+    <section class="topmenu2">
+        <div class="mainwrapper menulowresu">
+            <strong class="logo">
+                <a href="{{ path('core_homepage') }}">
+                    <span>{{ 'global.site_logo_title'| trans }}</span>
+                    <img src="{{ asset('bundles/core/images/koran_logo.png') }}" height="100" width="100"/>
+                </a>
+            </strong>
+            <ul>
+                {% if app.user is not null and is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <li class="profile">
+                        {#<a href="{{ path('sonata_user_profile_show') }}">{{ 'global.myprofil'|trans({'%username%': app.user.username}) }}</a>#}
+                        <span>{{ app.user.username }}</span>
+                    </li>
+                    <li class="logout">
+                        <a href="{{ path('fos_user_security_logout') }}">
+                            {{ 'global.logout' | trans }}
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="login">
+                        <a href="{{ path('fos_user_security_login') }}">{{ 'global.login' | trans }}</a>
+                    </li>
+                    <li class="register">
+                        <a href="{{ path('fos_user_registration_register') }}">{{ 'global.register' | trans }}</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </section>
+    <div class="mainnav">
+        <nav class="mainwrapper nav">
+            <ul>
+                <li><a href="{{ path('core_homepage') | url_decode() }}"
+                            {% if app.request.attributes.get('_route') == 'core_homepage' %} class="current"{% endif %}>
+                        {{ 'main_menu.home_page' | trans }}</a></li>
+                <li><a href="{{ path('reciters_list')  | url_decode() }}"
+                            {% if app.request.attributes.get('_route') == 'reciters_list' %} class="current"{% endif %}>
+                        {{ 'main_menu.reciters_list' | trans }}</a></li>
+                <li><a href="{{ path('tilawat_list') | url_decode() }}"
+                            {% if app.request.attributes.get('_route') == 'tilawat_list' %} class="current"{% endif %}>
+                        {{ 'main_menu.tilawat' | trans }}</a></li>
+                <li><a href="{{ path('adhkar_list') | url_decode() }}"
+                            {% if app.request.attributes.get('_route') == 'adhkar_list' %} class="current"{% endif %}>
+                        {{ 'main_menu.adhkar_list' | trans }}</a></li>
+                <li><a href="{{ path('text_adhkar_categories') | url_decode() }}"
+                            {% if app.request.attributes.get('_route') == 'text_adhkar_categories' %} class="current"{% endif %}>
+                        {{ 'main_menu.text_adhkar_categories' | trans }}</a></li>
+                <li><a href="{{ path('hadith_categories') | url_decode() }}"
+                            {% if app.request.attributes.get('_route') == 'hadith_categories' %} class="current"{% endif %}>
+                        {{ 'main_menu.hadith' | trans }}</a></li>
+                <li><a href="{{ path('playlist_list') | url_decode() }}"
+                       class="top-link{% if app.request.attributes.get('_route') == 'playlist_list' %} current{% endif %}">
+                        {{ 'main_menu.choose_play_list' | trans }}</a></li>
+                <li><a href="{{ path('core_contact_us')  | url_decode() }}"
+                            {% if app.request.attributes.get('_route') == 'core_contact_us' %} class="current"{% endif %}>
+                        {{ 'global.contact_us' | trans }}</a></li>
+
+            </ul>
+
+            <form action="" method="post">
+                <select name="choice" size="1" onChange="jump(this.form)" class="list-nav">
+                    <option value="{{ path('core_homepage') | url_decode() }}"
+                            {% if app.request.attributes.get('_route') == 'core_homepage' %} selected{% endif %}>
+                        {{ 'main_menu.home_page' | trans }}</option>
+                    <option value="{{ path('reciters_list') | url_decode() }}"
+                            {% if app.request.attributes.get('_route') == 'reciters_list' %} selected{% endif %}>
+                        {{ 'main_menu.reciters_list' | trans }}</option>
+                    <option value="{{ path('tilawat_list') | url_decode() }}"
+                            {% if app.request.attributes.get('_route') == 'tilawat_list' %} selected{% endif %}>
+                        {{ 'main_menu.tilawat' | trans }}</option>
+                    <option value="{{ path('adhkar_list') | url_decode() }}"
+                            {% if app.request.attributes.get('_route') == 'adhkar_list' %} selected{% endif %}>
+                        {{ 'main_menu.adhkar_list' | trans }}</option>
+                    <option value="{{ path('text_adhkar_categories') | url_decode() }}"
+                            {% if app.request.attributes.get('_route') == 'text_adhkar_categories' %} selected{% endif %}>
+                        {{ 'main_menu.text_adhkar_categories' | trans }}</option>
+                    <option value="{{ path('hadith_categories') | url_decode() }}"
+                            {% if app.request.attributes.get('_route') == 'hadith_categories' %} selected{% endif %}>
+                        {{ 'main_menu.hadith' | trans }}</option>
+                    <option value="{{ path('playlist_list') | url_decode() }}"
+                            class="top-link{% if app.request.attributes.get('_route') == 'playlist_list' %} current{% endif %}">
+                        {{ 'main_menu.choose_play_list' | trans }}</option>
+                    <option value="{{ path('core_contact_us') | url_decode() }}"
+                            {% if app.request.attributes.get('_route') == 'core_contact_us' %} selected{% endif %}>
+                        {{ 'global.contact_us' | trans }}</option>
+                </select>
+            </form>
+        </nav>
+    </div>
+</header>

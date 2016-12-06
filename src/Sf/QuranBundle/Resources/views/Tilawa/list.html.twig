@@ -1,0 +1,30 @@
+{% extends 'CoreBundle::layout.html.twig' %}
+
+{% block meta %}
+    {{ generate_meta("Tilawat") | raw }}
+{% endblock %}
+
+{% block body %}
+    <section class="bodywrapper inner">
+        <section class="mainwrapper">
+            <h2>
+                <img src="{{ asset('bundles/core/images/tilawat-icon.png') }}" alt="{{ 'main_menu.tilawat' | trans }}" class="home-icon-label" width="63" height="63" />
+                {{ 'main_menu.tilawat' | trans }}
+                <a href="{{ path('tilawa_listen_all') | url_decode() }}" class="listen-all listen-icon animated-hover">{{ 'global.tilawa_listen_all' | trans }}</a>
+                <span class="h-line">&nbsp;</span>
+            </h2>
+            <section class="grid">
+                {% for tilawa in tilawaList %}
+                    <article class="column c-one-third">
+                        <h3>{{ tilawa.name }}<span class="h-line">&nbsp;</span></h3>
+                        <a href="{{ path('tilawa_play',{
+                        'name' : tilawa.name | trim | replace({" " : "-"}),
+                        'id':tilawa.id
+                        }) | url_decode() }}"
+                           class="readmorebtn">{{ 'global.listen' | trans }}</a>
+                    </article>
+                {% endfor %}
+            </section>
+        </section>
+    </section>
+{% endblock %}

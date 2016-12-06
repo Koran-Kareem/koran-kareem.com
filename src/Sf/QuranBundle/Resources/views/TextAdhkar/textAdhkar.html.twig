@@ -1,0 +1,37 @@
+{% extends 'CoreBundle::layout.html.twig' %}
+
+
+{% block meta %}
+    {{ generate_meta("textAdhkarCategory",category) | raw }}
+{% endblock %}
+
+{% block body %}
+    {% set cp=0 %}
+    <section class="bodywrapper inner">
+        <section class="mainwrapper">
+            <h2>
+                <img src="{{ asset('bundles/core/images/adhkar-icon.png') }}" alt="{{ category.name }}" class="home-icon-label" width="63" height="63" />
+                {{ category.name }}
+                <a href="{{ path('text_adhkar_categories') | url_decode() }}"
+                   class="back-to-playlist animated-hover">{{ 'playlist.back_to_playlist' | trans }}</a>
+                <span class="h-line"></span>
+            </h2>
+            <section class="grid">
+                {% include 'CoreBundle:Commun:share-btn.html.twig' with {'_type': 'textAdhkarCategory', '_object' : category} %}
+
+                {% for text_adhkar in textAdhkarList %}
+                    <article>
+                        <blockquote class="text-adhkar-content">
+                            {{ text_adhkar.text | nl2br }}
+                            {% if text_adhkar.source is not empty %}
+                                <span class="source">[{{ text_adhkar.source }}]</span>
+                            {% endif %}
+                            <span class="h-line"></span>
+                        </blockquote>
+                    </article>
+                {% endfor %}
+                <div class="clear-both"></div>
+            </section>
+        </section>
+    </section>
+{% endblock %}

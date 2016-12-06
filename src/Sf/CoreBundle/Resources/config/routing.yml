@@ -1,0 +1,11 @@
+core_homepage:
+    pattern:  /
+    defaults: { _controller: CoreBundle:Default:index }
+
+core_contact_us:
+    pattern:  /contact-us/تواصل-معنا
+    defaults: { _controller: CoreBundle:Contact:contact }
+
+core_page:
+    pattern:  /page/{slug}
+    defaults: { _controller: CoreBundle:Page:show }

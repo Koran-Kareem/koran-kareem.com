@@ -1,0 +1,195 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*--------------- greenhome start here---------------*/
+.homegreen .nav .current,
+.homegreen .readmorebtn,
+.homegreen .slider2 a.active,
+.homegreen .nivo-controlNav a.active,
+.homegreen .pagination li a.prev,
+.homegreen .pagination li a.next,
+.homegreen .dropcap.color,
+.homegreen .button,
+.homegreen #toggle-view li h3.color,
+.homegreen .meter > span,
+.homegreen .nav ul li a:hover
+{
+	background:#72651c !important;
+}
+.homegreen .testimonialcon strong,
+.homegreen .TabbedPanelsTabSelected,
+.homegreen .date,
+.homegreen .tabs .current
+{
+	color:#796C23 !important;
+}
+.homegreen .button:hover,
+.homegreen #toggle-view li h3.color:hover
+{
+	background:#A49645 !important;
+	text-decoration:none;
+}
+.homegreen .readmorebtn:hover,
+.homegreen .pagination li a.prev:hover,
+.homegreen .pagination li a.next:hover
+{
+	background:#ac9b3c !important;
+}
+.homegreen .bismiallah {
+	background:url(../images/bisimgreen.png) no-repeat center center;
+}
+.homegreen .mainheader {
+	overflow: hidden;
+	width: 100%;
+	background:url(../images/banner-bg-green.jpg) repeat-x top;
+}
+.homegreen .mainnav {
+	border-bottom:5px solid #72651C;
+}
+.homegreen .nav {
+	line-height:41px;
+}
+.homegreen .nivo-caption {
+	background:url(../images/caption-bg-green.png) no-repeat left top;
+}
+.homegreen .ui-datepicker-calendar .ui-state-active {
+	background:url("../images/date-dot.png") no-repeat center 24px #796c23;
+}
+.homegreen .ui-datepicker-header{
+	background:url(../images/calender-top-g.jpg) no-repeat;
+}
+.homegreen .footertop{
+	background:url(../images/footerpattren-green.jpg);
+}
+.homegreen .meter {
+    background: none repeat scroll 0 0 #a49645;
+}
+.homegreen .button:hover{
+	background:#A49645;
+}
+/*--------------- green home ended here---------------*/
+
+/*--------------- homebrown start here---------------*/
+.homebrown .nav .current,
+.homebrown .readmorebtn,
+.homebrown .slider2 a.active,
+.homebrown .nivo-controlNav a.active,
+.homebrown .pagination li a.prev,
+.homebrown .pagination li a.next,
+.homebrown .meter,
+.homebrown #toggle-view li h3.color,
+.homebrown .dropcap.color,
+.homebrown .meter,
+.homebrown #toggle-view li h3.color,
+.homebrown .dropcap.color
+{
+	background:#af857e !important;
+}
+.homebrown .readmorebtn:hover,
+.homebrown .slider2 a.active:hover,
+.homebrown .nivo-controlNav a.active:hover,
+.homebrown .pagination li a.prev:hover,
+.homebrown .pagination li a.next:hover,
+.homebrown #toggle-view li h3.color:hover
+{
+	background:#D0AEA9 !important;
+}
+.homebrown .testimonialcon strong,
+.homebrown .TabbedPanelsTabSelected,
+.homebrown .date,
+.homebrown .tabs .current
+{
+	color:#af857e !important;
+}
+.homebrown .readmorebtn:hover{
+	background:#d0aea9 !important;
+}
+.homebrown .nav ul li a:hover{
+	background:#af857e ;
+}
+.homebrown .bismiallah {
+	background:url(../images/bisimgreen3.png) no-repeat center center;
+}
+.homebrown .mainheader {
+	background:url(../images/banner-bg-3.jpg) repeat-x top;
+}
+.homebrown .mainnav {
+	border-color:#af857e;
+}
+.homebrown .nivo-caption {
+	background:url(../images/captionbgred.png) no-repeat left top;
+}
+
+.homebrown .ui-datepicker-calendar .ui-state-active {
+	background:url("../images/date-dot.png") no-repeat center 24px #af857e;
+}
+.homebrown .ui-datepicker-header{
+	background:url(../images/calender-top-b.jpg) no-repeat;
+}
+.homebrown .footertop{
+	background:url(../images/footerpattren-brown.jpg);
+}
+.homebrown .meter > span{
+	background:#D0AEA9;
+}
+/*--------------- homebrown ended here---------------*/
+
+/*--------------- homeblue start here---------------*/
+.homeblue .readmorebtn,
+.homeblue .slider2 a.active,
+.homeblue .nivo-controlNav a.active,
+.homeblue .pagination li a.prev,
+.homeblue .pagination li a.next,
+.homeblue .meter > span,
+.homeblue #toggle-view li h3.color
+{
+	background:#454a5f !important;
+}
+.homeblue .readmorebtn:hover,
+.homeblue .pagination li a.prev:hover,
+.homeblue .pagination li a.next:hover,
+.homeblue #toggle-view li h3.color:hover
+{
+	background:#666c87 !important;
+}
+.homeblue .testimonialcon strong,
+.homeblue .TabbedPanelsTabSelected,
+.homeblue .date,
+.homeblue .tabs .current
+{
+	color:#5b6075 !important;
+}
+.homeblue .nav ul li a:hover,
+.homeblue .nav .current,
+.homeblue .meter,
+.homeblue .dropcap.color,
+.homeblue .list-nav,
+.homeblue .list-nav option
+{
+	background:#5e6890 !important;
+}
+.homeblue .bismiallah {
+	background:url(../images/bisimblue.png) no-repeat center center;
+}
+.homeblue .mainheader {
+	background:url(../images/banner-bg-blue.jpg) repeat-x top;
+}
+.homeblue .mainnav {
+	border-color:#5e6890;
+	background:#2d3247;
+}
+.homeblue .nivo-caption {
+	background:url(../images/captionbpurple.png) no-repeat left top;
+}
+
+.homeblue .ui-datepicker-calendar .ui-state-active {
+	background:url("../images/date-dot.png") no-repeat center 24px #5b6075;
+}
+.homeblue .ui-datepicker-header{
+	background:url(../images/calender-top-blue.jpg) no-repeat;
+}
+.homeblue .footertop{
+	background:url(../images/footerpattren-blue.jpg);
+}
+/*--------------- homeblue ended here---------------*/

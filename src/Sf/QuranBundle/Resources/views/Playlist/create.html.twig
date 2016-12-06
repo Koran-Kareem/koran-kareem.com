@@ -1,0 +1,28 @@
+{% extends 'CoreBundle::layout.html.twig' %}
+
+{% block body %}
+    <section class="bodywrapper inner">
+        <section class="mainwrapper">
+            <h2>{{ 'playlist.create' | trans }}
+                <a href="{{ path('playlist_list') }}"
+                   class="back-to-playlist animated-hover">{{ 'playlist.back_to_playlist' | trans }}</a>
+                <span class="h-line"></span>
+            </h2>
+
+            <div id="playlist-target">
+                <ul id="playlist-ul">
+                </ul>
+                <input
+                        title-trans="{{ 'playlist.enter_playlist_name' | trans }}"
+                        ok-trans="{{ 'playlist.ok' | trans }}"
+                        cancel-trans="{{ 'playlist.cancel' | trans }}"
+                        save-url="{{ path('playlist_save') }}" name="save_playlist" type="button"
+                        class="readmorebtn submit save-playlist" value="{{ 'playlist.save_playlist' | trans }}">
+                <input name="cancel_playlist" type="button" class="readmorebtn submit gray cancel-playlist"
+                       value="{{ 'playlist.cancel_playlist' | trans }}">
+            </div>
+            {% include 'QuranBundle:Playlist:Commun/items_block.html.twig'%}
+        </section>
+    </section>
+
+{% endblock %}

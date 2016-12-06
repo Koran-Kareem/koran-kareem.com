@@ -1,0 +1,103 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:none;
+}
+
+a{ 
+	text-decoration: none; 
+	color:black;
+}
+
+*{
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+
+
+
+
+
+/* for youtube (both html5 and flash backup) */
+.youtubeIframeMain,
+.flashMain{
+	position:absolute;
+	width:320px;
+	height:240px;
+	outline:none;
+	display:none;
+}
+
+/* flash audio backup */
+.flashAudio{
+	position:absolute;
+	width:100px;
+	height:100px;
+	display:none;
+}
+
+/* flash circle backup */
+.circleMain{
+	position:absolute;
+	width:160px;
+	height:160px;
+	outline:none;
+	display:none;
+}
+
+
+/* playlist list */
+#playlist_list{
+	display:none;
+}
+
+.playlist_inner ul{
+	padding:0px;
+	margin:0px;
+}
+
+
+/* font calculations for song scroll */
+.fontMeasure{
+	position:absolute;
+	visibility:hidden;
+	left:-10000px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:15px;
+    white-space: nowrap;
+}
+
+
+/* ios download confirm */
+.download_confirm{
+	position:absolute;
+    width: 200px;
+	left:50%;
+	top:50%;
+	margin-left:-100px;
+	display:none;
+}
+
+.download_confirm p{
+	padding:10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#fff;
+	background:#ccc;
+	text-align: center;
+}
+
+
+
+		 
+		 
+		 
+		 
+		 
+		  
+
+
+

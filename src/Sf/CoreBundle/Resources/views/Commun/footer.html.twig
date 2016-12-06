@@ -1,0 +1,54 @@
+<!-- footer -->
+<footer class="footerwrapper">
+    <section class="footertop">
+        <section class="grid-holder mainwrapper">
+            <section class="grid">
+                <!-- #4 column -->
+                <figure class="column c-one-fourth site-map"><strong class="headingstyle03">{{ 'global.sitemap' | trans }}</strong>
+                    <ul class="ulstyel02">
+                        <li><a href="{{ path('core_homepage') | url_decode() }}">
+                            {{ 'main_menu.home_page' | trans }}</a></li>
+                        <li><a href="{{ path('reciters_list') | url_decode() }}">
+                            {{ 'main_menu.reciters_list' | trans }}</a></li>
+                        <li><a href="{{ path('tilawat_list')  | url_decode()}}">
+                            {{ 'main_menu.tilawat' | trans }}</a></li>
+                        <li><a href="{{ path('adhkar_list')  | url_decode()}}">
+                            {{ 'main_menu.adhkar_list' | trans }}</a></li>
+                        <li><a href="{{ path('text_adhkar_categories')  | url_decode()}}">
+                            {{ 'main_menu.text_adhkar_categories' | trans }}</a></li>
+                        <li><a href="{{ path('hadith_categories')  | url_decode()}}">
+                            {{ 'main_menu.hadith' | trans }}</a></li>
+                        <li><a href="{{ path('playlist_list') | url_decode() }}">
+                            {{ 'main_menu.choose_play_list' | trans }}</a></li>
+                        <li><a href="{{ path('core_contact_us') | url_decode() }}">
+                            {{ 'global.contact_us' | trans }}</a></li>
+                    </ul>
+                </figure>
+                <figure class="column c-one-fourth"><strong class="headingstyle03">{{ 'global.social_networks'| trans }}</strong>
+                    <ul class="ulstyel02">
+                        <li>{{ 'global.footer_location' | trans }}</li>
+                    </ul>
+                    <ul class="socialnetcon">
+                        <li><a href="http://www.facebook.com/thekorankareem" data="{{ 'global.join_us_facebook' | trans }}"  target="_blank" class="fb white"><span
+                                class="social-txt">Facebook</span></a></li>
+                        <li><a href="http://twitter.com/KoranKareem_com" target="_blank" data="{{ 'global.join_us_twitter' | trans }}" class="twetter white"><span
+                                class="social-txt">Tweeter</span></a></li>
+                        <li><a href="https://plus.google.com/117110620390418387424" rel="publisher" target="_blank" data="{{ 'global.join_us_google' | trans }}" class="google white"><span
+                                class="social-txt">Tweeter</span></a></li>
+                    </ul>
+                </figure>
+                <figure class="column c-one-fourth"><strong class="headingstyle03">{{ 'global.about_site' | trans }}</strong>
+                    <blockquote>
+                        {{ 'global.short_description' | trans }}
+                    </blockquote>
+                </figure>
+            </section>
+        </section>
+    </section>
+    <section class="copyright">
+        <section class="mainwrapper">
+            <article class="copy-right">{{ 'global.copyright' | trans({'%currentYear%' : "now"|date("Y")}) | raw }}</article>
+            <a href="#" onclick="scrollToTop();return false">{{ 'global.back_to_top' | trans }}</a>
+        </section>
+    </section>
+</footer>

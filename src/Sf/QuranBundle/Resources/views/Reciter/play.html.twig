@@ -1,0 +1,25 @@
+{% extends 'CoreBundle::layout.html.twig' %}
+
+{% block meta %}
+    {{ generate_meta("Chapter",reciter,chapter) | raw }}
+{% endblock %}
+
+{% block body %}
+    <section class="bodywrapper inner">
+        <section class="mainwrapper">
+            <h2>
+                <img src="{{ asset('bundles/core/images/quran-icon.png') }}" alt="{{ reciter.arabicName }} - {{ chapter  | replace({"-" : " "})   }}" class="home-icon-label" width="63" height="63" />
+                {{ reciter.arabicName }} - {{ chapter  | replace({"-" : " "})   }}
+                <a href="{{ path('reciter_list_chapter',{'slug': reciter.slug ,'name': reciter.arabicName | trim | replace({" " : "-"})  }) | url_decode() }}"
+                   class="back-to-playlist animated-hover">{{ 'playlist.back_to_playlist' | trans }}</a>
+                <span class="h-line">&nbsp;</span>
+            </h2>
+            <section class="grid">
+                <article class="column c-three-fourth">
+                    {{ generate_player_chapter(reciter,ordering,chapter,reciter_dir) | raw }}
+                </article>
+                {% include 'CoreBundle:Commun:share-btn.html.twig' with {'_type': 'reciter', '_object' : reciter} %}
+            </section>
+        </section>
+    </section>
+{% endblock %}

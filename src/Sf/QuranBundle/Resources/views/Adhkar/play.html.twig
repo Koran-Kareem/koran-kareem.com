@@ -1,0 +1,25 @@
+{% extends 'CoreBundle::layout.html.twig' %}
+
+{% block meta %}
+    {{ generate_meta("Adhkar",adhkar) | raw }}
+{% endblock %}
+
+{% block body %}
+    <section class="bodywrapper inner">
+        <section class="mainwrapper">
+            <h2>
+                <img src="{{ asset('bundles/core/images/adhkar-icon.png') }}" alt="{{ adhkar.name }}" class="home-icon-label" width="63" height="63" />
+                {{ adhkar.name }}
+                <a href="{{ path('adhkar_list')  | url_decode()}}"
+                   class="back-to-playlist animated-hover">{{ 'playlist.back_to_playlist' | trans }}</a>
+                <span class="h-line">&nbsp;</span>
+            </h2>
+            <section class="grid">
+                <article class="column c-three-fourth">
+                    {{ generate_player_adhkar(adhkar,adhkar_dir) | raw }}
+                </article>
+                {% include 'CoreBundle:Commun:share-btn.html.twig' with {'_type': 'adhkar', '_object' : adhkar} %}
+            </section>
+        </section>
+    </section>
+{% endblock %}

@@ -1,0 +1,83 @@
+{
+    "name": "symfony/framework-standard-edition",
+    "description": "The \"Symfony Standard Edition\" distribution",
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "2.*",
+        "doctrine/orm": "dev-master",
+        "doctrine/dbal": "dev-master",
+        "doctrine/common": "dev-master",
+        "doctrine/doctrine-bundle": "1.*",
+        "twig/extensions": "1.*",
+        "symfony/assetic-bundle": "2.*",
+        "symfony/swiftmailer-bundle": "2.*",
+        "symfony/monolog-bundle": "~2.4",
+        "sensio/distribution-bundle": "~3.0",
+        "sensio/framework-extra-bundle": "~3.0",
+        "sensio/generator-bundle": "2.*",
+
+        "incenteev/composer-parameter-handler": "~2.0",
+        "gedmo/doctrine-extensions": "2.*",
+        "beberlei/DoctrineExtensions": "dev-master",
+        "stof/doctrine-extensions-bundle": "dev-master",
+        "doctrine/doctrine-migrations-bundle": "dev-master",
+        "doctrine/doctrine-fixtures-bundle": "2.*",
+        "doctrine/migrations": "1.*",
+        "jms/translation-bundle": "1.*",
+        "jms/di-extra-bundle": "1.*",
+        "jms/security-extra-bundle": "1.5.*@dev",
+        "guzzle/guzzle": "3.8.*@dev",
+
+        "knplabs/knp-menu-bundle": "dev-master",
+        "sonata-project/admin-bundle": "2.*",
+        "sonata-project/core-bundle": "2.*",
+        "sonata-project/block-bundle": "2.*",
+        "sonata-project/doctrine-orm-admin-bundle": "2.*",
+        "sonata-project/user-bundle": "2.*",
+        "sonata-project/datagrid-bundle": "2.*",
+
+        "friendsofsymfony/user-bundle": "1.*",
+        "snc/redis-bundle": "1.1.8",
+        "predis/predis": "0.8.x-dev",
+        "cspoo/swiftmailer-mailgun-bundle": "^0.2.1"
+    },
+    "require-dev": {
+        "playbloom/guzzle-bundle": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git://github.com/ludofleury/GuzzleBundle.git"
+        }
+    ],
+    "scripts": {
+        "post-install-cmd": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ],
+        "post-update-cmd": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        }
+    }
+}
