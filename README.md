@@ -20,6 +20,7 @@ To install DB schema (it contain already the data for current Reciters, Adhkar, 
 ```
 
 Download upload directory and unzip it under web folder, it should be as this path `web/upload`:
+
 https://s3.eu-central-1.amazonaws.com/koran-karrem/upload.zip
 
 3) Install assets + dump
