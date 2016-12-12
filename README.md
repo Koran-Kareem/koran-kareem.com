@@ -1,7 +1,9 @@
 koran-kareem.com's Code Source
 ==============================
 اَلسَّلَامُ عَلَيْكُمْ
+
 We're happy to put our website code source free to download and use.
+
 Please follow the documentation in order to install it.
 
 The code was written in year 2012, so is not the best :), any suggestion, improvement are welcome.
