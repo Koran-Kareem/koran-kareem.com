@@ -2,11 +2,11 @@ koran-kareem.com's Code Source
 ==============================
 اَلسَّلَامُ عَلَيْكُمْ
 
-We're happy to put our website code source free to download and use.
+We're happy to put our website's code source free to download and use.
 
-Please follow the documentation in order to install it.
+Please follow the documentation in order to install it, the application is based on Symfony2 framework.
 
-The code was written in year 2012, so is not the best :), any suggestion, improvement are welcome.
+The code was written in year 2013, so is not the best :), any suggestion or improvement are welcome.
 
 1) Installation
 ---------------
@@ -23,7 +23,7 @@ Download upload directory and unzip it under web folder, it should be as this pa
 
 https://s3.eu-central-1.amazonaws.com/koran-karrem/upload.zip
 
-3) Install assets + dump
+2) Install assets + dump
 ------------------------
 To install assets:
 ```
@@ -32,7 +32,7 @@ To install assets:
 ```
 
 
-2) Clear the Cache
+3) Clear the Cache
 ------------------
 Like any Symfony2 application to clear the cache use:
  
@@ -41,10 +41,15 @@ Like any Symfony2 application to clear the cache use:
 ```
 
 
-2) Accessing the admin panel
+4) Accessing the admin panel
 ----------------------------
-The admin is accessible through `/admin`, the default username/password is admin/admin 
+The admin is accessible through `/admin`, the default username/password is admin/admin
 
+
+
+5) License (GPL)
+----------------
+GNU General Public License v 3.0
 
 
 http://www.koran-kareem.com
