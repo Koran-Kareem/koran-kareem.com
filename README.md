@@ -4,9 +4,9 @@ koran-kareem.com's Code Source
 
 We're happy to put our website's code source free to download and use.
 
-Please follow the documentation in order to install it, the application is based on Symfony2 framework.
+Please follow the documentation in order to install it, the application is based on Symfony2 framework and it runs on latest stage version of it (2.8.15).
 
-The code was written in year 2013, so is not the best :), any suggestion or improvement are welcome.
+The code was written beg the year 2012, so is not the best :), any suggestion or improvement are welcome.
 
 1) Installation
 ---------------
