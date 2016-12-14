@@ -41,13 +41,23 @@ Like any Symfony2 application to clear the cache use:
 ```
 
 
-4) Accessing the admin panel
+4) Run the application in development environment
+-------------------------------------------------
+Cd to the project root folder, and run the php server through this command 
+```
+    php -S  127.0.0.1:8080 -t web
+```
+
+After you can browse the main page: http://127.0.0.1:8080/app_dev.php
+
+
+5) Accessing the admin panel
 ----------------------------
-The admin is accessible through `/admin`, the default username/password is admin/admin
+The admin is accessible through http://127.0.0.1:8080/app_dev.php/admin , the default username/password is admin/admin
 
 
 
-5) License (GPL)
+6) License (GPL)
 ----------------
 GNU General Public License v 3.0
 
