@@ -30,7 +30,7 @@
         "doctrine/migrations": "1.*",
         "jms/translation-bundle": "1.*",
         "jms/di-extra-bundle": "1.*",
-        "jms/security-extra-bundle": "1.5.*@dev",
+        "jms/security-extra-bundle": "1.6.*",
         "guzzle/guzzle": "3.8.*@dev",
 
         "knplabs/knp-menu-bundle": "dev-master",
