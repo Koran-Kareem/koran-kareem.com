@@ -1058,7 +1058,7 @@ return $this->getMethod() === strtoupper($method);
 }
 public function isMethodSafe()
 {
-return in_array($this->getMethod(), array('GET','HEAD','OPTIONS','TRACE'));
+return in_array($this->getMethod(), 0 < func_num_args() && !func_get_arg(0) ? array('GET','HEAD','OPTIONS','TRACE') : array('GET','HEAD'));
 }
 public function isMethodCacheable()
 {
@@ -2459,11 +2459,11 @@ protected $booted = false;
 protected $name;
 protected $startTime;
 protected $loadClassCache;
-const VERSION ='2.8.14';
-const VERSION_ID = 20814;
+const VERSION ='2.8.15';
+const VERSION_ID = 20815;
 const MAJOR_VERSION = 2;
 const MINOR_VERSION = 8;
-const RELEASE_VERSION = 14;
+const RELEASE_VERSION = 15;
 const EXTRA_VERSION ='';
 const END_OF_MAINTENANCE ='11/2018';
 const END_OF_LIFE ='11/2019';
@@ -3055,8 +3055,34 @@ $metadata = $this->getMetaFile();
 if (!is_file($metadata)) {
 return true;
 }
+$metadata = $this->getMetaFile();
+if (!is_file($metadata)) {
+return false;
+}
+$e = null;
+$meta = false;
 $time = filemtime($this->file);
+$signalingException = new \UnexpectedValueException();
+$prevUnserializeHandler = ini_set('unserialize_callback_func','');
+$prevErrorHandler = set_error_handler(function ($type, $msg, $file, $line, $context) use (&$prevErrorHandler, $signalingException) {
+if (E_WARNING === $type &&'Class __PHP_Incomplete_Class has no unserializer'=== $msg) {
+throw $signalingException;
+}
+return $prevErrorHandler ? $prevErrorHandler($type, $msg, $file, $line, $context) : false;
+});
+try {
 $meta = unserialize(file_get_contents($metadata));
+} catch (\Error $e) {
+} catch (\Exception $e) {
+}
+restore_error_handler();
+ini_set('unserialize_callback_func', $prevUnserializeHandler);
+if (null !== $e && $e !== $signalingException) {
+throw $e;
+}
+if (false === $meta) {
+return false;
+}
 foreach ($meta as $resource) {
 foreach ($this->resourceCheckers as $checker) {
 if (!$checker->supports($resource)) {
