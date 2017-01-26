@@ -35,7 +35,6 @@ To install assets:
 3) Clear the Cache
 ------------------
 Like any Symfony2 application to clear the cache use:
- 
 ```
     php app/console cache:clear
 ```
