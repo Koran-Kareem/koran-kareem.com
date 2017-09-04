@@ -72,7 +72,8 @@
         ]
     },
     "config": {
-        "bin-dir": "bin"
+        "bin-dir": "bin",
+        "secure-http": false
     },
     "minimum-stability": "stable",
     "extra": {
