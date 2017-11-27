@@ -8,7 +8,7 @@ Please follow the documentation in order to install it, the application is based
 
 The code was written beg the year 2012, so is not the best :), any suggestion or improvement are welcome.
 
-1) Installation
+# Installation
 ---------------
 Clone the project and install the dependencies:
 
@@ -23,7 +23,7 @@ Download upload directory and unzip it under web folder, it should be as this pa
 
 https://s3.eu-central-1.amazonaws.com/koran-karrem/upload.zip
 
-2) Install assets + dump
+# Install assets + dump
 ------------------------
 To install assets:
 ```
@@ -32,7 +32,7 @@ To install assets:
 ```
 
 
-3) Clear the Cache
+# Clear the Cache
 ------------------
 Like any Symfony2 application to clear the cache use:
 ```
@@ -40,7 +40,7 @@ Like any Symfony2 application to clear the cache use:
 ```
 
 
-4) Run the application in development environment
+# Run the application in development environment
 -------------------------------------------------
 Cd to the project root folder, and run the php server through this command 
 ```
@@ -50,13 +50,13 @@ Cd to the project root folder, and run the php server through this command
 After you can browse the main page: http://127.0.0.1:8080/app_dev.php
 
 
-5) Accessing the admin panel
+# Accessing the admin panel
 ----------------------------
 The admin is accessible through http://127.0.0.1:8080/app_dev.php/admin , the default username/password is admin/admin
 
 
 
-6) License (GPL)
+# License (GPL)
 ----------------
 GNU General Public License v 3.0
 
