@@ -9,6 +9,6 @@ fos_user:
             template:   FOSUserBundle:Registration:email.txt.twig
     from_email:
             address:        "%webmaster_email%"
-            sender_name:    "Koran-Kareem"
+            sender_name:    "Koran-Karim"
     group:
             group_class: Application\Sonata\UserBundle\Entity\Group
