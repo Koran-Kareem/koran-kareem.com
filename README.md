@@ -1,4 +1,4 @@
-koran-kareem.com's Code Source
+koran-karim.com's Code Source
 ==============================
 اَلسَّلَامُ عَلَيْكُمْ
 
@@ -61,4 +61,4 @@ The admin is accessible through http://127.0.0.1:8080/app_dev.php/admin , the de
 GNU General Public License v 3.0
 
 
-http://www.koran-kareem.com
+http://www.koran-karim.com
