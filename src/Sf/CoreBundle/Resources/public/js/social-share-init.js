@@ -4,7 +4,7 @@ $('#twitter').sharrre({
     },
     enableHover:false,
     enableTracking:true,
-    buttons:{ twitter:{via:'KoranKareem_com'}},
+    buttons:{ twitter:{via:'Koran_Karim_'}},
     click:function (api, options) {
         api.simulateClick();
         api.openPopup('twitter');
