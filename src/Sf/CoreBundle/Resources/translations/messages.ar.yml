@@ -1,5 +1,5 @@
 global:
-  site_title: موقع القرآن الكريم Koran-Kareem
+  site_title: موقع القرآن الكريم Koran-Karim
   site_description:
   site_logo_title: موقع القرآن الكريم
   register: تسجيل في الموقع
@@ -27,7 +27,7 @@ global:
   error_occurred: عفوا! حدث خطأ
   error_404: عمّار 404 !
   page_not_found: لم يتم العثور على هذه الصفحة
-  error_on_page: حدث خطأ في هذه الصفحة. الرجاء الاتصال بنا على البريد الإلكتروني : contact@koran-kareem.com
+  error_on_page: حدث خطأ في هذه الصفحة. الرجاء الاتصال بنا على البريد الإلكتروني : contact@koran-karim.com
   back_to_home_page: العودة إلى الصفحة الرئيسية
   more: تصفّح المزيد
   tilawa_listen_all: إستمع للجميع
