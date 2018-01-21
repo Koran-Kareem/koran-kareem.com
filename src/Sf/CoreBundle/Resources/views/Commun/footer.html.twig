@@ -4,7 +4,8 @@
         <section class="grid-holder mainwrapper">
             <section class="grid">
                 <!-- #4 column -->
-                <figure class="column c-one-fourth site-map"><strong class="headingstyle03">{{ 'global.sitemap' | trans }}</strong>
+                <figure class="column c-one-fourth site-map"><strong
+                            class="headingstyle03">{{ 'global.sitemap' | trans }}</strong>
                     <ul class="ulstyel02">
                         <li><a href="{{ path('core_homepage') | url_decode() }}">
                                 {{ 'main_menu.home_page' | trans }}</a></li>
@@ -24,22 +25,31 @@
                                 {{ 'global.contact_us' | trans }}</a></li>
                     </ul>
                 </figure>
-                <figure class="column c-one-fourth"><strong class="headingstyle03">{{ 'global.about_site' | trans }}</strong>
+                <figure class="column c-one-fourth"><strong
+                            class="headingstyle03">{{ 'global.about_site' | trans }}</strong>
                     <blockquote>
                         {{ 'global.short_description' | trans }}
                     </blockquote>
                 </figure>
-                <figure class="column c-one-fifth"><strong class="headingstyle03">{{ 'global.social_networks'| trans }}</strong>
+                <figure class="column c-one-fifth"><strong
+                            class="headingstyle03">{{ 'global.social_networks'| trans }}</strong>
                     <ul class="ulstyel02">
                         <li>{{ 'global.footer_location' | trans }}</li>
                     </ul>
                     <ul class="socialnetcon">
-                        <li><a href="http://www.facebook.com/KoranKarimPage" data="{{ 'global.join_us_facebook' | trans }}" target="_blank" class="fb white"><span
+                        <li><a href="http://www.facebook.com/KoranKarimPage"
+                               data="{{ 'global.join_us_facebook' | trans }}" target="_blank"
+                               class="facebook-link white"><span
                                         class="social-txt">Facebook</span></a></li>
-                        <li><a href="http://twitter.com/Koran_Karim_" target="_blank" data="{{ 'global.join_us_twitter' | trans }}" class="twetter white"><span
+                        <li><a href="http://twitter.com/Koran_Karim_" target="_blank"
+                               data="{{ 'global.join_us_twitter' | trans }}" class="twitter-link white"><span
                                         class="social-txt">Tweeter</span></a></li>
-                        <li><a href="https://plus.google.com/117110620390418387424" rel="publisher" target="_blank" data="{{ 'global.join_us_google' | trans }}" class="google white"><span
-                                        class="social-txt">Tweeter</span></a></li>
+                        <li><a href="https://www.instagram.com/koran_karim_com" rel="publisher" target="_blank"
+                               data="{{ 'global.join_us_instagram' | trans }}" class="instagram-link white"><span
+                                        class="social-txt">Instagram</span></a></li>
+                        <li><a href="https://plus.google.com/+KoranKarimPage" rel="publisher" target="_blank"
+                               data="{{ 'global.join_us_google' | trans }}" class="google-link white"><span
+                                        class="social-txt">Google Plus</span></a></li>
                     </ul>
                 </figure>
                 <figure class="column c-one-fifth">
@@ -57,7 +67,8 @@
     </section>
     <section class="copyright">
         <section class="mainwrapper">
-            <article class="copy-right">{{ 'global.copyright' | trans({'%currentYear%' : "now"|date("Y")}) | raw }}</article>
+            <article
+                    class="copy-right">{{ 'global.copyright' | trans({'%currentYear%' : "now"|date("Y")}) | raw }}</article>
             <a href="#" onclick="scrollToTop();return false">{{ 'global.back_to_top' | trans }}</a>
         </section>
     </section>

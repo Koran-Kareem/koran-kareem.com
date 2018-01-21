@@ -2,7 +2,7 @@ parameters:
     database_driver:   pdo_mysql
     database_host:     localhost
     database_port:     ~
-    database_name:     koran-kareem
+    database_name:     koran-karim
     database_user:     root
     database_password: root
 
@@ -15,8 +15,8 @@ parameters:
     default_local:     ar
     secret:            changeThisSecret
 
-    site_url: http://www.koran-kareem.com
-    webmaster_email: contact@koran-kareem.com
+    site_url: http://www.koran-karim.com
+    webmaster_email: contact@koran-karim.com
     webmaster_name: "ﻡﻮﻘﻋ ﺎﻠﻗﺭﺂﻧ ﺎﻠﻛﺮﻴﻣ"
     google_analytics_id: ""
 

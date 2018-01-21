@@ -213,7 +213,7 @@ body {
 	left:10px;
 	width:0px;
 	height:6px;
-	background: #13508b;
+	background: #c45c27;
 }
 
 #componentWrapper .player_volume_tooltip{
@@ -273,7 +273,7 @@ body {
 
 #componentWrapper .play_progress{
 	position:absolute;
-	background:#13508b;
+	background:#c45c27;
 	top:5px;
 	height:6px;
 }
@@ -370,7 +370,7 @@ body {
 
 #componentWrapper .playlistSelected {
 	float:right;
-	color: #13508b;
+	color: #c45c27;
 	margin-top:3px;
 }
 

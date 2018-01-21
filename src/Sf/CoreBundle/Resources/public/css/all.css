@@ -76,7 +76,7 @@ input, select, textarea {
     /*text-indent:-999px;
     overflow:hidden;
     */
-    color: #5E6890;
+    color: #c45c27;
     font-size: 26px;
     font-family: 'KoranKareemTitle';
     width: 381px;
@@ -89,7 +89,7 @@ input, select, textarea {
 .logo a {
     display: block;
     height: 100%;
-    color: #5E6890;
+    color: #c45c27;
     text-decoration: none;
     text-align: right;
 }
@@ -1010,8 +1010,8 @@ input, select, textarea {
 
 .socialnetcon li a {
     margin: 0 5px 0 0;
-    width: 25px;
-    height: 25px;
+    width: 32px;
+    height: 32px;
     float: left;
 }
 
@@ -1021,28 +1021,20 @@ input, select, textarea {
     display: block;
 }
 
-.fb {
-    background: url(../images/socialnetwork.png) no-repeat 0 0;
+.facebook-link {
+    background: url(../images/socials/facebook.png) no-repeat;
 }
 
-.flicker {
-    background: url(../images/socialnetwork.png) no-repeat -33px 0;
+.twitter-link {
+    background: url(../images/socials/twitter.png) no-repeat;
 }
 
-.twetter {
-    background: url(../images/socialnetwork.png) no-repeat -65px 0;
+.google-link {
+    background: url(../images/socials/google.png) no-repeat;
 }
 
-.skype {
-    background: url(../images/socialnetwork.png) no-repeat -99px 0;
-}
-
-.linkin {
-    background: url(../images/socialnetwork.png) no-repeat -129px 0;
-}
-
-.google {
-    background: url(../images/google+.png) no-repeat;
+.instagram-link {
+    background: url(../images/socials/instagram.png) no-repeat;
 }
 
 .site-map {
@@ -2258,7 +2250,7 @@ html[xmlns] .slides {
 }
 
 #playlist-target li span {
-    color: #5E6890;
+    color: #c45c27;
     text-decoration: none;
     font-family: 'Conv_KacstTitle';
     font-size: 14px;
@@ -2288,7 +2280,7 @@ html[xmlns] .slides {
 }
 
 .homeblue .nav .top-link:hover, .homeblue .nav .top-link.current {
-    background: #5E6890 url("../images/new.png") no-repeat !important;
+    background: #c45c27 url("../images/new.png") no-repeat !important;
     background-position: 7px 11px !important;
 }
 
