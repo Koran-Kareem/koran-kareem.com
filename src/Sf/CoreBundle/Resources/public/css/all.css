@@ -80,7 +80,7 @@ input, select, textarea {
     font-size: 26px;
     font-family: 'KoranKareemTitle';
     width: 381px;
-    padding-top: 53px;
+    /*padding-top: 53px;*/
     margin: 0;
     display: block;
     float: right;
@@ -96,11 +96,12 @@ input, select, textarea {
 
 .logo img {
     float: right;
-    margin-top: -44px;
+    margin-top: 2px;
 }
 
 .logo span {
     float: left;
+    display: none;
 }
 
 .mainwrapper {
@@ -137,12 +138,12 @@ input, select, textarea {
     width: 100%;
     overflow: hidden;
     /*padding-bottom: 15px;*/
-    height: 117px;
+    height: 173px;
 }
 
 .topmenu2 ul {
     float: left;
-    margin: 45px 0 0;
+    margin: 88px 0 0;
     padding: 0;
 }
 
@@ -155,7 +156,8 @@ input, select, textarea {
 }
 
 .topmenu2 ul li a {
-    color: #2e1308;
+    color: #c45c27;
+    font-weight: bold;
 }
 
 .topmenu2 ul li:first-child {
@@ -2622,8 +2624,7 @@ a.developed-by {
     }
 
     .topmenu2 ul {
-        margin-top: -21px;
-        margin-left: 85px;
+        margin-top: -91px;
     }
 
     .mainheader {
@@ -2737,8 +2738,11 @@ a.developed-by {
 
     .logo {
         float: none;
-        margin: 21px auto;
         padding: 0;
+    }
+
+    .topmenu2 {
+        height: 130px;
     }
 
     .topmenu2 ul {
@@ -2873,7 +2877,7 @@ a.developed-by {
     }
 
     .logo img {
-        display: none;
+        width: 179px;
     }
 
     .logo span {
