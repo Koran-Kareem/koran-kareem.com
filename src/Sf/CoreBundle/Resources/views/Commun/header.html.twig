@@ -11,26 +11,6 @@
                     <img alt="{{ 'global.site_logo_title'| trans }}" title="{{ 'global.site_logo_title'| trans }}" src="{{ asset('bundles/core/images/koran_logo.png') }}" width="243"/>
                 </a>
             </strong>
-            <ul>
-                {% if app.user is not null and is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                    <li class="profile">
-                        {#<a href="{{ path('sonata_user_profile_show') }}">{{ 'global.myprofil'|trans({'%username%': app.user.username}) }}</a>#}
-                        <span>{{ app.user.username }}</span>
-                    </li>
-                    <li class="logout">
-                        <a href="{{ path('fos_user_security_logout') }}">
-                            {{ 'global.logout' | trans }}
-                        </a>
-                    </li>
-                {% else %}
-                    <li class="login">
-                        <a href="{{ path('fos_user_security_login') }}">{{ 'global.login' | trans }}</a>
-                    </li>
-                    <li class="register">
-                        <a href="{{ path('fos_user_registration_register') }}">{{ 'global.register' | trans }}</a>
-                    </li>
-                {% endif %}
-            </ul>
         </div>
     </section>
     <div class="mainnav">
