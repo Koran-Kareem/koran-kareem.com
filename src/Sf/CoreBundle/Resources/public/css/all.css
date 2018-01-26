@@ -144,8 +144,8 @@ input, select, textarea {
 
 .registration-ul {
     margin: 0 auto;
-    padding: 0px 15px;
-    width: 242px;
+    padding: 0 15px;
+    width: 270px;
     display: block;
     height: 30px;
     background: #F7F4EF;
@@ -154,7 +154,7 @@ input, select, textarea {
 .registration-ul li {
     list-style: none;
     display: inline;
-    padding: 0 5px 0 19px;
+    padding:0 5px 0px;
     float: right;
 }
 
@@ -163,6 +163,13 @@ input, select, textarea {
     font-weight: bold;
 }
 
+
+.registration-ul li.login {
+}
+
+.registration-ul li.register {
+    float: left;
+}
 .registration-ul li:first-child {
     background: none;
 }
@@ -1592,7 +1599,7 @@ html[xmlns] .slides {
 .c-field {
     padding: 10px 10px;
     width: 80%;
-    height: 15px;
+    height: 40px;
     border: 1px solid #c6c4c0;
 }
 
@@ -2168,6 +2175,7 @@ html[xmlns] .slides {
 .usermenu {
 
 }
+
 .usermenu .bg-user {
     top: 4%;
     height: 47px;
