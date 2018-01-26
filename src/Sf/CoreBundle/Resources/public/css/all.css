@@ -167,7 +167,8 @@ input, select, textarea {
 .registration-ul li.login {
 }
 
-.registration-ul li.register {
+.registration-ul li.register,
+.registration-ul li.logout {
     float: left;
 }
 .registration-ul li:first-child {
